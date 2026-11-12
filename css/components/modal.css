@@ -1,0 +1,62 @@
+/* =========================================================
+   MODAL (native <dialog>) — project case studies & certificates
+   Controlled by js/modules/modal.js
+   ========================================================= */
+.modal {
+  width: min(880px, calc(100vw - 32px));
+  max-height: calc(100vh - 48px);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 40px 80px -30px rgba(43, 29, 20, .55);
+  overflow: hidden;
+}
+.modal::backdrop { background: rgba(43, 29, 20, .55); backdrop-filter: blur(4px); }
+.modal[open] { animation: modalIn .45s var(--ease); }
+.modal[open]::backdrop { animation: fadeIn .3s ease; }
+
+.modal__panel { position: relative; max-height: calc(100vh - 48px); overflow-y: auto; }
+.modal__close {
+  position: sticky;
+  top: 14px;
+  float: right;
+  z-index: 2;
+  width: 44px; height: 44px;
+  margin: 14px 14px 0 0;
+  display: grid; place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+}
+.modal__close:hover { background: var(--latte); transform: rotate(90deg); }
+.modal__body { padding: 32px; }
+
+/* Case study layout */
+.case__eyebrow { margin: 0; font-family: var(--font-label); font-size: 12px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; color: var(--caramel-dark); }
+.case__title { margin-top: 8px; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; line-height: 1.2; padding-right: 48px; }
+.case__shot { margin: 22px 0 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+.case__shot img { width: 100%; max-height: 380px; object-fit: cover; object-position: top; }
+.case__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 22px; }
+.case__block { padding: 18px 20px; border-radius: var(--radius); background: var(--bg); border: 1px solid var(--line); }
+.case__block h4 { margin: 0 0 8px; font-family: var(--font-head); font-size: 15px; font-weight: 700; color: var(--mocha); }
+.case__block p, .case__block ul { margin: 0; font-size: 15px; line-height: 1.65; color: var(--body); }
+.case__block ul { padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+.case__note { margin: 18px 0 0; font-size: 13px; color: var(--soft); }
+
+/* Certificate view */
+.cert-view { text-align: center; }
+.cert-view__media { border-radius: var(--radius); overflow: hidden; background: var(--latte); border: 1px solid var(--line); }
+.cert-view__media img { width: 100%; max-height: 70vh; object-fit: contain; background: #fff; }
+.cert-view__media .cert__thumb { width: 100%; aspect-ratio: 16 / 9; }
+.cert-view h3 { margin-top: 18px; font-size: 20px; font-weight: 700; }
+.cert-view p { margin: 4px 0 0; color: var(--muted); }
+
+html.has-modal { overflow: hidden; }
+
+@keyframes modalIn { from { opacity: 0; transform: translateY(24px) scale(.97); } to { opacity: 1; transform: none; } }
+@keyframes fadeIn { from { opacity: 0; } }

@@ -1,1644 +1,825 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dede Latifa Isnaini — Software Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Dede Latifa Isnaini, an Informatics Engineering graduate (Cum Laude) and IT Developer intern at Reethau Group, building web applications, internal business systems and Generative AI / RAG tools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Figtree:wght@400;500;600;700&display=swap">
+  <!-- One entry stylesheet; it imports every module in the correct order -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Shared setup: must load first (marks <html class="js"> and creates window.Portfolio) -->
+  <script src="js/utils/motion.js"></script>
+</head>
+<body>
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+<!-- ============ NAVBAR ============ -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="#hero" class="brand">
+      <span class="brand__logo">DL</span>
+      <span class="brand__name">Dede Latifa Isnaini</span>
+    </a>
 
-    <meta
-      name="description"
-      content="Portfolio of Dede Latifa Isnaini, a fresh graduate in Informatics Engineering with experience in software engineering, frontend development, IT support, and Linux-based system deployment."
-    />
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Portfolio</a>
+      <a href="#experience">Experience</a>
+      <a href="#certificates">Certificates</a>
+      <a class="btn btn--primary btn--sm" href="https://wa.me/62895639434882" target="_blank" rel="noopener">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+        WhatsApp
+      </a>
+    </nav>
 
-    <title>Dede Latifa Isnaini — Software Engineer Portfolio</title>
+    <div class="nav__end">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">
+        <svg class="ic theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="ic theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+<main>
 
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
+<!-- ============ HERO ============ -->
+<section id="hero" class="hero container">
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@700;800&family=Sora:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+  <div class="hero__grid">
+    <div class="hero__text">
+      <div class="badge fu d1"><span class="badge__dot"></span>Open to Work · Jakarta / Bekasi</div>
+      <p class="eyebrow fu d2">Software Engineer · Full-stack &amp; AI</p>
+      <h1 class="hero__title fu d2">Hi, I'm <span class="accent">Dede Latifa</span> Isnaini<span class="caret">_</span></h1>
+      <p class="hero__lead fu d3">
+        I build web applications, internal business systems and Generative AI / RAG tools — and deploy them on Linux.
+        Informatics Engineering graduate (Cum Laude), now an IT Developer intern at Reethau Group.
+      </p>
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="./styles/style.css" />
-  </head>
-
-  <body>
-    <!-- ==================== NAVBAR ==================== -->
-    <header>
-      <div class="nav">
-        <div class="main-container">
-          <div class="logo">
-            <a href="#hero" class="brand">
-              <span class="brand-sub">
-                Software Engineer | Generative AI & RAG Applications | Frontend Development | IT Support  
-              </span>
-            </a>
-          </div>
-
-          <nav aria-label="Primary navigation">
-            <ul>
-              <li>
-                <a href="#hero" class="active">
-                  Home
-                </a>
-              </li>
-
-              <li>
-                <a href="#about">
-                  About
-                </a>
-              </li>
-
-              <li>
-                <a href="#services">
-                  Expertise
-                </a>
-              </li>
-
-              <li>
-                <a href="#skills">
-                  Skills
-                </a>
-              </li>
-
-              <li>
-                <a href="#portfolios">
-                  Portfolio
-                </a>
-              </li>
-
-              <li>
-                <a href="#experience">
-                  Experience
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://wa.me/62895639434882"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn primary"
-                >
-                  WhatsApp
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-          <button
-            class="burger"
-            aria-label="Toggle navigation menu"
-            aria-expanded="false"
-          >
-            <div></div>
-            <div></div>
-            <div></div>
+      <div class="hero__actions fu d4">
+        <div class="dropdown" id="cvDropdown">
+          <button class="btn btn--primary btn--lg" id="cvBtn" aria-haspopup="true" aria-expanded="false">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+            Download CV
+            <svg class="ic ic--chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
           </button>
+          <div class="dropdown__menu" id="cvMenu" role="menu">
+            <a role="menuitem" href="resume/Resume_Dede-latifa-isnaini(software).pdf" target="_blank" rel="noopener"><strong>Software Engineer</strong><span>Software development, web &amp; frontend</span></a>
+            <a role="menuitem" href="resume/Resume_Dede-latifa-isnaini(IT-Support).pdf" target="_blank" rel="noopener"><strong>IT Support &amp; Infrastructure</strong><span>Technical support, systems &amp; networking</span></a>
+            <a role="menuitem" href="resume/Resume_Dede-latifa-isnaini(AI-Engineer).pdf" target="_blank" rel="noopener"><strong>AI / RAG Engineer</strong><span>Generative AI, RAG &amp; Python</span></a>
+            <a role="menuitem" href="resume/Resume_Dede-latifa-isnaini(Frontend%20Dev).pdf" target="_blank" rel="noopener"><strong>Frontend Developer</strong><span>React, responsive UI &amp; API integration</span></a>
+          </div>
         </div>
+        <a class="btn btn--ghost btn--lg" href="#work">
+          View Projects
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
       </div>
 
-      <!-- ==================== HERO ==================== -->
-      <section
-        id="hero"
-        class="main-container hero-animated"
-      >
-        <div class="hero-text" data-reveal>
-          <div class="hero-badge">
-            <span class="sparkle">✦</span>
-            Open to Work
-          </div>
+      <div class="socials fu d5">
+        <a href="https://github.com/isnaltfh" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a>
+        <a href="https://www.linkedin.com/in/dede-latifa-isnaini-3837542a4" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.instagram.com/isnaaltfh_/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5"/></svg></a>
+        <a href="mailto:isnaltfh08@gmail.com" aria-label="Email"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+      </div>
+    </div>
 
-          <p class="pre-title">
-            WELCOME TO MY PORTFOLIO
-          </p>
-
-          <h1>
-            I'm
-            <span>Dede Latifa Isnaini</span>
-          </h1>
-
-          <h2 class="role-big">
-            Fresh Graduate Software Engineer
-          </h2>
-
-          <p class="lead">
-            Fresh graduate in Informatics Engineering with hands-on
-            experience in software development, frontend development,
-            IT support, and Linux-based system deployment. Completed
-            a six-month placement at PT PLN Nusantara Power while
-            developing an internal RAG chatbot as a final project.
-          </p>
-
-          <div
-            class="chip-rows"
-            aria-label="Technical skills"
-          >
-            <div class="chip-row">
-              <span class="chip-label">
-                Software Engineering
-              </span>
-
-              <span class="chip">Python</span>
-              <span class="chip">FastAPI</span>
-              <span class="chip">Laravel</span>
-              <span class="chip">REST API</span>
-            </div>
-
-            <div class="chip-row">
-              <span class="chip-label">
-                Frontend
-              </span>
-
-              <span class="chip">React.js</span>
-              <span class="chip">JavaScript</span>
-              <span class="chip">HTML &amp; CSS</span>
-              <span class="chip">Responsive UI</span>
-            </div>
-
-            <div class="chip-row">
-              <span class="chip-label">
-                Infrastructure
-              </span>
-
-              <span class="chip">Linux</span>
-              <span class="chip">Nginx</span>
-              <span class="chip">systemd</span>
-              <span class="chip">
-                Network Troubleshooting
-              </span>
-            </div>
-
-            <div class="chip-row">
-              <span class="chip-label">
-                AI &amp; Data
-              </span>
-
-              <span class="chip">RAG</span>
-              <span class="chip">ChromaDB</span>
-              <span class="chip">Ollama</span>
-              <span class="chip">MySQL</span>
-            </div>
-          </div>
-
-          <div class="cta">
-            <div class="cv-download">
-              <button
-                type="button"
-                class="btn primary cv-download-btn"
-                id="cvDownloadBtn"
-              >
-                Download CV
-                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-              </button>
-
-              <div class="cv-menu" id="cvMenu">
-
-                <a
-                  href="./resume/Resume_Dede-latifa-isnaini(software).pdf"
-                  download
-                  class="cv-option"
-                >
-                  <div class="cv-option-icon">
-                    <i class="fa-solid fa-code"></i>
-                  </div>
-
-                  <div>
-                    <strong>Software Engineer</strong>
-                    <span>Software development, web & frontend</span>
-                  </div>
-
-                  <i class="fa-solid fa-download cv-download-icon"></i>
-                </a>
-
-
-                <a
-                  href="./resume/Resume_Dede-latifa-isnaini(IT-Support).pdf"
-                  download
-                  class="cv-option"
-                >
-                  <div class="cv-option-icon">
-                    <i class="fa-solid fa-desktop"></i>
-                  </div>
-
-                  <div>
-                    <strong>IT Support & Infrastructure</strong>
-                    <span>Technical support, systems & networking</span>
-                  </div>
-
-                  <i class="fa-solid fa-download cv-download-icon"></i>
-                </a>
-
-
-                <a
-                  href="./resume/Resume_Dede-latifa-isnaini(AI-Engineer).pdf"
-                  download
-                  class="cv-option"
-                >
-                  <div class="cv-option-icon">
-                    <i class="fa-solid fa-brain"></i>
-                  </div>
-
-                  <div>
-                    <strong>AI / RAG Engineer</strong>
-                    <span>Generative AI, RAG & Python</span>
-                  </div>
-
-                  <i class="fa-solid fa-download cv-download-icon"></i>
-                </a>
-
-                <a
-                  href="./resume/Resume_Dede-latifa-isnaini(Frontend Dev).pdf"
-                  class="cv-option"
-                  download
-                >
-                  <div class="cv-option-icon">
-                    <i class="fa-solid fa-laptop-code"></i>
-                  </div>
-
-                  <div>
-                    <strong>Frontend Developer</strong>
-                    <span>React, responsive UI & API integration</span>
-                  </div>
-
-                  <i class="fa-solid fa-download cv-download-icon"></i>
-                </a>
-
-              </div>
-            </div>
-
-            <a
-              href="#portfolios"
-              class="btn"
-            >
-              View Projects
-            </a>
-          </div>
+    <div class="hero__visual fu d4">
+      <!-- Animated illustration (styles & animation live inside the SVG file) -->
+      <div class="scene">
+        <img class="scene__img" src="images/illustrations/coding-girl.svg" alt="Illustration of a woman coding on a laptop with a cup of coffee" width="420" height="440">
+      </div>
+      <div class="float-card float-card--gpa float">
+        <strong>3.58</strong>
+        <span>GPA · Cum Laude</span>
+      </div>
+      <div class="float-card float-card--rag float2">
+        <div class="float-card__head">
+          <span class="float-card__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></span>
+          RAG Chatbot · PLN NP
         </div>
+        <div class="meter"><div class="meter__bar"></div></div>
+        <span>0.83 Faithfulness · 1.00 Recall</span>
+      </div>
+    </div>
+  </div>
 
-        <!-- Developer illustration -->
-        <div
-          class="hero-visual"
-          data-reveal
-          aria-hidden="true"
-        >
-          <svg
-            class="dev-illustration"
-            viewBox="0 0 560 380"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <linearGradient
-                id="g1"
-                x1="0"
-                y1="0"
-                x2="1"
-                y2="1"
-              >
-                <stop
-                  offset="0"
-                  stop-color="#22162c"
-                />
+  <div class="stats">
+    <div class="stat reveal"><strong class="c-mocha" data-count="20573">20,573</strong><span>pages of technical PDFs indexed for RAG</span></div>
+    <div class="stat reveal"><strong class="c-sage">6 → &lt;3 min</strong><span>response time per query after optimization</span></div>
+    <div class="stat reveal"><strong class="c-caramel" data-count="50" data-suffix="+">50+</strong><span>IT incidents resolved for 50+ employees</span></div>
+    <div class="stat reveal"><strong class="c-slate" data-count="20" data-suffix="+">20+</strong><span>workstations deployed and configured</span></div>
+  </div>
+</section>
 
-                <stop
-                  offset="1"
-                  stop-color="#120f1a"
-                />
-              </linearGradient>
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" data-marquee>
+    <span>Python</span><span>FastAPI</span><span>Laravel</span><span>REST API</span><span>React.js</span>
+    <span>JavaScript</span><span>Tailwind CSS</span><span>RAG</span><span>ChromaDB</span><span>Ollama</span>
+    <span>MySQL</span><span>Linux</span><span>Nginx</span><span>systemd</span><span>Git</span>
+  </div>
+</div>
 
-              <linearGradient
-                id="acc"
-                x1="0"
-                y1="0"
-                x2="1"
-                y2="0"
-              >
-                <stop
-                  offset="0"
-                  stop-color="#a855f7"
-                />
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section container">
+  <div class="about">
 
-                <stop
-                  offset="1"
-                  stop-color="#7e22ce"
-                />
-              </linearGradient>
-            </defs>
-
-            <g transform="translate(30,30)">
-              <rect
-                width="500"
-                height="300"
-                rx="18"
-                fill="url(#g1)"
-                stroke="rgba(255,255,255,.10)"
-              />
-
-              <circle
-                cx="22"
-                cy="18"
-                r="5"
-                fill="#ff6b6b"
-              />
-
-              <circle
-                cx="38"
-                cy="18"
-                r="5"
-                fill="#ffd166"
-              />
-
-              <circle
-                cx="54"
-                cy="18"
-                r="5"
-                fill="#06d6a0"
-              />
-
-              <g transform="translate(26,46)">
-                <rect
-                  class="bar b1"
-                  x="0"
-                  y="0"
-                  width="440"
-                  height="12"
-                  rx="6"
-                  fill="url(#acc)"
-                />
-
-                <rect
-                  class="bar b2"
-                  x="0"
-                  y="28"
-                  width="360"
-                  height="12"
-                  rx="6"
-                  fill="url(#acc)"
-                />
-
-                <rect
-                  class="bar b3"
-                  x="0"
-                  y="56"
-                  width="420"
-                  height="12"
-                  rx="6"
-                  fill="url(#acc)"
-                />
-
-                <rect
-                  class="bar b4"
-                  x="0"
-                  y="84"
-                  width="320"
-                  height="12"
-                  rx="6"
-                  fill="url(#acc)"
-                />
-
-                <rect
-                  class="bar b5"
-                  x="0"
-                  y="112"
-                  width="460"
-                  height="12"
-                  rx="6"
-                  fill="url(#acc)"
-                />
-
-                <rect
-                  class="bar b6"
-                  x="0"
-                  y="140"
-                  width="380"
-                  height="12"
-                  rx="6"
-                  fill="url(#acc)"
-                />
-
-                <rect
-                  class="cursor c1"
-                  x="444"
-                  y="0"
-                  width="10"
-                  height="12"
-                  rx="2"
-                />
-
-                <rect
-                  class="cursor c2"
-                  x="364"
-                  y="28"
-                  width="10"
-                  height="12"
-                  rx="2"
-                />
-
-                <rect
-                  class="cursor c3"
-                  x="424"
-                  y="56"
-                  width="10"
-                  height="12"
-                  rx="2"
-                />
-
-                <rect
-                  class="cursor c4"
-                  x="324"
-                  y="84"
-                  width="10"
-                  height="12"
-                  rx="2"
-                />
-
-                <rect
-                  class="cursor c5"
-                  x="464"
-                  y="112"
-                  width="10"
-                  height="12"
-                  rx="2"
-                />
-
-                <rect
-                  class="cursor c6"
-                  x="384"
-                  y="140"
-                  width="10"
-                  height="12"
-                  rx="2"
-                />
-              </g>
-
-              <rect
-                x="150"
-                y="314"
-                width="230"
-                height="18"
-                rx="9"
-                fill="url(#g1)"
-                stroke="rgba(255,255,255,.08)"
-              />
-            </g>
-
-            <circle
-              class="float-dot"
-              cx="520"
-              cy="62"
-              r="4"
-              fill="#a855f7"
-            />
-
-            <circle
-              class="float-dot"
-              cx="36"
-              cy="252"
-              r="4"
-              fill="#fb7185"
-            />
-
-            <circle
-              class="float-dot"
-              cx="520"
-              cy="262"
-              r="4"
-              fill="#22c55e"
-            />
-          </svg>
+    <!-- Photo card -->
+    <div class="about__media reveal">
+      <figure class="photo-card">
+        <div class="photo-card__frame" data-fallback-wrap>
+          <!-- Put your photo at images/profile.png (portrait, ± 800×1000 px) -->
+          <img class="photo-card__img" src="images/profile.png" alt="Portrait of Dede Latifa Isnaini" data-fallback>
+          <span class="photo-card__placeholder" aria-hidden="true">DL</span>
         </div>
-      </section>
-    </header>
+        <figcaption class="photo-card__badge float">
+          <span class="photo-card__badge-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span>
+          <span><strong>Cum Laude</strong>Informatics Engineering</span>
+        </figcaption>
+        <div class="photo-card__chip float2"><span class="badge__dot"></span>Open to Work</div>
+      </figure>
+    </div>
 
-    <!-- ==================== ABOUT ==================== -->
-    <section
-      id="about"
-      class="main-container about-section"
-      data-reveal
-    >
-      <h3 class="pre-title">
-        About
-      </h3>
+    <!-- Bio -->
+    <div class="about__content reveal">
+      <p class="eyebrow">About me</p>
+      <h2 class="h2">I build software that teams use every day.</h2>
+      <div class="about__text">
+        <p>I'm an Informatics Engineering graduate from <strong>UIN Syarif Hidayatullah Jakarta</strong> (<strong>GPA 3.58/4.00, Cum Laude</strong>), currently an <strong>Information Technology Developer intern at Reethau Group</strong>. There, I build the web systems PT Reethau Energi Terbarukan runs on, from procurement and sales performance dashboards to a B2B order request website.</p>
+        <p>Before that, I completed two engagements at PT PLN Nusantara Power UP Muara Tawar: supporting daily IT operations for 50+ employees while contributing to an internal procurement app, then building and deploying an internal RAG chatbot over 20,573 pages of technical manuals as my final project.</p>
+        <p>Working across IT support, backend, frontend and AI taught me to build for the people who use a system every day. I'm open to roles in <strong class="accent">Software Engineering, Full-stack / Frontend Development, Generative AI / RAG, and IT Support</strong>.</p>
+      </div>
 
-      <h2 class="section-title">
-        About Me
-      </h2>
+      <ul class="info-row">
+        <li class="info"><svg class="ic info__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg><div class="info__text"><strong>UIN Syarif Hidayatullah</strong><span>Informatics · 2022–2026</span></div></li>
+        <li class="info"><svg class="ic info__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg><div class="info__text"><strong>Reethau Group</strong><span>IT Developer · since Sep 2026</span></div></li>
+        <li class="info"><svg class="ic info__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><div class="info__text"><strong>North Bekasi</strong><span>On-site · Hybrid · Remote</span></div></li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</section>
 
-      <div class="about-grid">
-        <div class="about-photo">
-          <img
-            src="./images/profile.png"
-            alt="Dede Latifa Isnaini"
-          />
+<!-- ============ EXPERTISE ============ -->
+<section id="expertise" class="section container">
+  <p class="eyebrow reveal">Expertise</p>
+  <h2 class="h2 reveal">Core competencies</h2>
+  <div class="grid-4">
+    <article class="feature card lift reveal">
+      <span class="feature__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg></span>
+      <h3>Software Engineering</h3>
+      <p>Backend services and REST APIs with Python, FastAPI, PHP and Laravel — integrating databases, internal services and AI components into maintainable apps.</p>
+    </article>
+    <article class="feature card lift reveal">
+      <span class="feature__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/><path d="M8 21h8"/></svg></span>
+      <h3>Frontend Development</h3>
+      <p>Responsive interfaces with React.js, JavaScript, HTML and CSS — API integration, form processing, state handling and clear user feedback.</p>
+    </article>
+    <article class="feature card lift reveal">
+      <span class="feature__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span>
+      <h3>IT Support &amp; Infrastructure</h3>
+      <p>Hardware, software, OS and network troubleshooting — workstation deployment, user access, connectivity and technical documentation.</p>
+    </article>
+    <article class="feature card lift reveal">
+      <span class="feature__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><path d="M6 6.5h.01"/><path d="M6 17.5h.01"/></svg></span>
+      <h3>Deployment &amp; Integration</h3>
+      <p>Internal apps on Linux VMs with Nginx and systemd — monitoring services and resolving API, networking, caching and deployment issues.</p>
+    </article>
+  </div>
+</section>
 
-          <span class="about-role-badge">
-            Fresh Graduate in Informatics Engineering
-          </span>
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="section container">
+  <div class="skills reveal">
+    <p class="eyebrow">Technical skills</p>
+    <h2 class="h2">Tools &amp; technologies</h2>
+    <div class="skills__grid">
+      <div><h3>Languages</h3><div class="chips"><span>Python</span><span>JavaScript</span><span>PHP</span><span>HTML</span><span>CSS</span><span>SQL</span></div></div>
+      <div><h3>Frameworks</h3><div class="chips"><span>FastAPI</span><span>Laravel</span><span>React.js</span><span>Vite</span><span>Tailwind CSS</span></div></div>
+      <div><h3>AI &amp; Data</h3><div class="chips"><span>RAG</span><span>ChromaDB</span><span>Ollama</span><span>Qwen2.5</span><span>Mistral</span><span>BAAI/bge-m3</span><span>MySQL</span></div></div>
+      <div><h3>Infrastructure &amp; Tools</h3><div class="chips"><span>Linux</span><span>Ubuntu</span><span>Nginx</span><span>systemd</span><span>VMware</span><span>Git</span><span>GitHub</span><span>VS Code</span><span>Postman</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO ============ -->
+<section id="work" class="section container">
+  <div class="section__head">
+    <div>
+      <p class="eyebrow reveal">My works</p>
+      <h2 class="h2 reveal">Featured projects</h2>
+      <p class="section__sub reveal">Click <strong>Case study</strong> on any project to see the problem, what I built, and the result.</p>
+    </div>
+    <div class="filters reveal" role="group" aria-label="Filter projects">
+      <button class="filter is-active" data-filter-group="projects" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter" data-filter-group="projects" data-filter="ai" aria-pressed="false">AI / RAG</button>
+      <button class="filter" data-filter-group="projects" data-filter="fullstack" aria-pressed="false">Full-stack</button>
+      <button class="filter" data-filter-group="projects" data-filter="backend" aria-pressed="false">Backend</button>
+      <button class="filter" data-filter-group="projects" data-filter="frontend" aria-pressed="false">Frontend</button>
+    </div>
+  </div>
+
+  <div class="projects">
+
+    <!-- 1. RAG Chatbot (featured, wide) -->
+    <article class="project project--featured card lift reveal" data-filter-item="projects" data-cat="ai">
+      <div class="project__shot"><img src="images/chatbot.png" alt="PLN NP Internal RAG Chatbot interface" loading="lazy"></div>
+      <div class="project__body">
+        <div class="project__meta">
+          <span class="tag tag--mocha">AI / RAG · Final Project</span>
+          <span class="project__lock"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Internal</span>
         </div>
-
-        <div class="about-content">
-          <p>
-            I am a fresh graduate in Informatics Engineering from
-            <strong>
-              UIN Syarif Hidayatullah Jakarta
-            </strong>,
-            graduating with a
-            <strong>
-              GPA of 3.58/4.00 and Cum Laude distinction
-            </strong>.
-            <br /><br />
-
-            I gained hands-on industry experience through two engagements
-            at PT PLN Nusantara Power UP Muara Tawar. During my internship,
-            I supported daily IT operations, configured workstations,
-            troubleshot hardware, software, and network issues, and
-            contributed to the continued development of an internal
-            procurement application.
-            <br /><br />
-
-            For my final project, I developed, evaluated, and deployed an
-            internal Retrieval-Augmented Generation (RAG) application using
-            Python, FastAPI, ChromaDB, BAAI/bge-m3, Ollama, Linux, Nginx,
-            and systemd. The project strengthened my experience in AI
-            application development, system integration, troubleshooting,
-            and Linux-based deployment.
-            <br /><br />
-
-            I am currently pursuing opportunities in Software Engineering,
-            Generative AI / RAG Development, Frontend Development, and
-            IT Support.
-          </p>
-
-          <div
-            class="socials"
-            aria-label="Connect with me"
-          >
-            <a
-              href="https://www.instagram.com/isnaaltfh_/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="soc ig"
-              aria-label="Instagram"
-            >
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-
-            <a
-              href="https://github.com/isnaltfh"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="soc github"
-              aria-label="GitHub"
-            >
-              <i class="fa-brands fa-github"></i>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/dede-latifa-isnaini-3837542a4"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="soc linkedin"
-              aria-label="LinkedIn"
-            >
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-          </div>
+        <h3>PLN NP Internal RAG Chatbot</h3>
+        <p class="project__summary">An internal assistant that answers questions from PLN technical manuals and shows which document each answer came from.</p>
+        <div class="project__metrics">
+          <div><strong>20,573</strong><span>pages indexed</span></div>
+          <div><strong>0.83</strong><span>faithfulness</span></div>
+          <div><strong>1.00</strong><span>context recall</span></div>
+          <div><strong>&lt;3 min</strong><span>per query (was ~6 min)</span></div>
+        </div>
+        <div class="stack"><span>Python</span><span>FastAPI</span><span>ChromaDB</span><span>BAAI/bge-m3</span><span>Ollama</span><span>Qwen2.5</span><span>Linux</span><span>Nginx</span></div>
+        <div class="project__actions">
+          <button class="btn btn--primary btn--sm" data-modal-case>Read case study</button>
         </div>
       </div>
-    </section>
+      <div class="case" hidden>
+        <p class="case__eyebrow">AI / RAG · Final Project · Apr – Jul 2026</p>
+        <h3 class="case__title">PLN NP Internal RAG Chatbot</h3>
+        <div class="case__grid">
+          <div class="case__block"><h4>The problem</h4><p>Technical answers were spread across 74 PDF manuals totaling 20,573 pages, so finding the right procedure took a long time.</p></div>
+          <div class="case__block"><h4>What I built</h4><ul><li>FastAPI backend and a ChromaDB retrieval pipeline with BAAI/bge-m3 embeddings.</li><li>LLM answers via Ollama (Qwen2.5) with document references.</li><li>Request cancellation for long-running questions.</li><li>Deployment on a Linux VM with Nginx and systemd.</li></ul></div>
+          <div class="case__block"><h4>Result</h4><ul><li>Evaluated with 20 questions validated by PLN technical personnel.</li><li>0.83 Faithfulness and 1.00 Context Recall.</li><li>Response time cut from ~6 minutes to under 3 minutes per query.</li></ul></div>
+          <div class="case__block"><h4>My role</h4><p>End-to-end: development, evaluation, optimization and deployment.</p></div>
+        </div>
+        <p class="case__note">Internal company system — no public demo available.</p>
+      </div>
+    </article>
 
-    <!-- ==================== EXPERTISE ==================== -->
-    <section id="services">
-      <div class="services main-container">
-        <h3 class="pre-title">
-          Expertise
-        </h3>
+    <!-- ===== Reethau Group (current internship) ===== -->
 
-        <h2 class="section-title">
-          Core Competencies
-        </h2>
+    <!-- RET Office -->
+    <article class="project card lift reveal" data-filter-item="projects" data-cat="fullstack">
+      <div class="project__shot"><img src="images/projects/ret-office.jpg" alt="RET Office procurement dashboard" loading="lazy"></div>
+      <div class="project__body">
+        <div class="project__meta">
+          <span class="tag tag--sage">Full-stack · Reethau</span>
+          <span class="project__lock"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Internal</span>
+        </div>
+        <h3>RET Office — Procurement &amp; Operations</h3>
+        <p class="project__summary">Internal system that handles purchase orders, payments and suppliers, plus day-to-day operational requests.</p>
+        <ul class="project__points">
+          <li>Purchase Orders, General Payments, suppliers &amp; delivery locations</li>
+          <li>Business-trip requests (SPPD), employees, users &amp; signatories</li>
+        </ul>
+        <div class="stack"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
+        <div class="project__actions"><button class="link-btn" data-modal-case>Case study <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button></div>
+      </div>
+      <div class="case" hidden>
+        <p class="case__eyebrow">Full-stack · Reethau Group · 2026</p>
+        <h3 class="case__title">RET Office — Procurement &amp; Operations System</h3>
+        <div class="case__grid">
+          <div class="case__block"><h4>The problem</h4><p>Procurement and operational paperwork for PT Reethau Energi Terbarukan needed one place to be created, tracked and approved.</p></div>
+          <div class="case__block"><h4>What I built</h4><ul><li>Procurement module: Purchase Orders, General Payments, suppliers and delivery locations.</li><li>Operations module: business-trip requests (SPPD), general payments and employee records.</li><li>Administration: user management and digital signatories.</li></ul></div>
+          <div class="case__block"><h4>Dashboard</h4><ul><li>Summary of POs, GPs and active suppliers for the current month.</li><li>"Needs a GP" list so pending payments aren't missed.</li><li>Monthly PO value chart and recent activity feed.</li></ul></div>
+          <div class="case__block"><h4>Tech</h4><p>Laravel, PHP, MySQL, JavaScript.</p></div>
+        </div>
+        <p class="case__note">Internal company system — no public demo available.</p>
+      </div>
+    </article>
 
-        <div class="services-grid">
-          <article class="service-card featured">
-            <div class="icon-badge">
-              <i
-                class="fa-solid fa-code"
-                aria-hidden="true"
-              ></i>
-            </div>
+    <!-- RET SalesFlow -->
+    <article class="project card lift reveal" data-filter-item="projects" data-cat="fullstack">
+      <div class="project__shot"><img src="images/projects/ret-salesflow.jpg" alt="RET SalesFlow performance dashboard" loading="lazy"></div>
+      <div class="project__body">
+        <div class="project__meta">
+          <span class="tag tag--sage">Full-stack · Reethau</span>
+          <span class="project__lock"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Internal</span>
+        </div>
+        <h3>RET SalesFlow — Sales Performance</h3>
+        <p class="project__summary">Internal business system that follows every sale from first contact to invoice, with a yearly performance dashboard.</p>
+        <ul class="project__points">
+          <li>Customer → feasibility study → quotation → PO → delivery → invoice</li>
+          <li>Volume per product, actual vs target charts, Excel export</li>
+        </ul>
+        <div class="stack"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
+        <div class="project__actions"><button class="link-btn" data-modal-case>Case study <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button></div>
+      </div>
+      <div class="case" hidden>
+        <p class="case__eyebrow">Full-stack · Reethau Group · 2026</p>
+        <h3 class="case__title">RET SalesFlow — Internal Business System</h3>
+        <div class="case__grid">
+          <div class="case__block"><h4>The problem</h4><p>Sales progress and delivery volumes per product were hard to follow and report across the year.</p></div>
+          <div class="case__block"><h4>What I built</h4><ul><li>Sales pipeline: customers, feasibility studies, quotations (SPH), customer POs, delivery orders and invoices.</li><li>Master data, reports and digital signatories.</li></ul></div>
+          <div class="case__block"><h4>Performance dashboard</h4><ul><li>Year-to-date revenue and volume per product (woodchips, wood pellet, palm kernel shell, dust).</li><li>Monthly actual vs target chart per product.</li><li>Target setting and one-click Excel download.</li></ul></div>
+          <div class="case__block"><h4>Tech</h4><p>Laravel, PHP, MySQL, JavaScript.</p></div>
+        </div>
+        <p class="case__note">Internal company system — no public demo available.</p>
+      </div>
+    </article>
 
-            <h3>
-              Software Engineering
-            </h3>
+    <!-- Reethau Biomassa order request -->
+    <article class="project card lift reveal" data-filter-item="projects" data-cat="fullstack">
+      <div class="project__shot"><img src="images/projects/reethau-order.jpg" alt="Reethau Biomassa order request website" loading="lazy"></div>
+      <div class="project__body">
+        <div class="project__meta"><span class="tag tag--sage">Full-stack · Reethau</span></div>
+        <h3>Reethau Biomassa — B2B Order Request</h3>
+        <p class="project__summary">Company website where industrial buyers browse biomass products and request a quotation online.</p>
+        <ul class="project__points">
+          <li>Product pages for wood chips, wood pellet &amp; biomass fuels</li>
+          <li>Validated quotation form with automated email notifications</li>
+        </ul>
+        <div class="stack"><span>Node.js</span><span>JavaScript</span><span>CSS</span></div>
+        <div class="project__actions"><button class="link-btn" data-modal-case>Case study <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button></div>
+      </div>
+      <div class="case" hidden>
+        <p class="case__eyebrow">Full-stack · Reethau Group · 2026</p>
+        <h3 class="case__title">Reethau Biomassa — B2B Order Request &amp; Notification System</h3>
+        <div class="case__grid">
+          <div class="case__block"><h4>The problem</h4><p>Client inquiries for biomass fuel needed a faster, structured way to reach the sales team.</p></div>
+          <div class="case__block"><h4>What I built</h4><ul><li>Responsive company website with home, product and ordering pages.</li><li>Quotation request ("Minta Penawaran") form with input validation.</li><li>Automated email dispatch so each request is followed up quickly.</li></ul></div>
+          <div class="case__block"><h4>Tech</h4><p>Node.js, JavaScript, CSS.</p></div>
+        </div>
+      </div>
+    </article>
 
-            <ul class="features">
-              <li>
-                Developing backend services and REST APIs using
-                Python, FastAPI, PHP, and Laravel.
-              </li>
+    <!-- ===== Earlier work ===== -->
 
-              <li>
-                Integrating databases, internal services, and AI
-                components into maintainable applications.
-              </li>
+    <!-- 2. Procurement -->
+    <article class="project card lift reveal" data-filter-item="projects" data-cat="backend">
+      <div class="project__shot"><img src="images/projek6.png" alt="PLN internal procurement and administration system" loading="lazy"></div>
+      <div class="project__body">
+        <div class="project__meta">
+          <span class="tag tag--sage">Backend · Internship</span>
+          <span class="project__lock"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Internal</span>
+        </div>
+        <h3>PLN Procurement &amp; Administration System</h3>
+        <p class="project__summary">Internal Laravel app for supplier, tender/project, CSMS and administrative workflows.</p>
+        <ul class="project__points">
+          <li>Data workflows &amp; backend controllers</li>
+          <li>Reporting and app maintenance</li>
+        </ul>
+        <div class="stack"><span>Laravel</span><span>PHP</span><span>MySQL</span></div>
+        <div class="project__actions"><button class="link-btn" data-modal-case>Case study <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button></div>
+      </div>
+      <div class="case" hidden>
+        <p class="case__eyebrow">Backend · Internship · Aug – Nov 2025</p>
+        <h3 class="case__title">PLN Internal Procurement &amp; Administration System</h3>
+        <div class="case__grid">
+          <div class="case__block"><h4>Context</h4><p>An internal application supporting procurement operations at PT PLN Nusantara Power UP Muara Tawar.</p></div>
+          <div class="case__block"><h4>What I worked on</h4><ul><li>Data workflows and backend controllers.</li><li>Supplier, tender/project, CSMS and administrative workflows.</li><li>Reporting features and ongoing maintenance.</li><li>Deployment support and database configuration.</li></ul></div>
+          <div class="case__block"><h4>Tech</h4><p>Laravel, PHP, MySQL, Linux server.</p></div>
+        </div>
+        <p class="case__note">Internal company system — no public demo available.</p>
+      </div>
+    </article>
+
+    <!-- 3. SIMPEL -->
+    <article class="project card lift reveal" data-filter-item="projects" data-cat="frontend">
+      <div class="project__shot"><img src="images/projek_simpel.png" alt="SIMPEL student reporting system dashboard" loading="lazy"></div>
+      <div class="project__body">
+        <div class="project__meta"><span class="tag tag--caramel">Full-stack</span></div>
+        <h3>SIMPEL — Student Reporting System</h3>
+        <p class="project__summary">Students report campus facility issues; admins track them through analytical dashboards.</p>
+        <ul class="project__points">
+          <li>Reporting flow for campus facilities</li>
+          <li>Service-performance dashboards with charts</li>
+        </ul>
+        <div class="stack"><span>PHP</span><span>React.js</span><span>JavaScript</span><span>MySQL</span></div>
+        <div class="project__actions">
+          <button class="link-btn" data-modal-case>Case study <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+          <a class="project__link" href="https://github.com/isnaltfh" target="_blank" rel="noopener">GitHub <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+        </div>
+      </div>
+      <div class="case" hidden>
+        <p class="case__eyebrow">Full-stack · Campus project</p>
+        <h3 class="case__title">Sistem Informasi Pelaporan Mahasiswa (SIMPEL)</h3>
+        <div class="case__grid">
+          <div class="case__block"><h4>The problem</h4><p>Campus facility issues needed one place to be reported, monitored and evaluated.</p></div>
+          <div class="case__block"><h4>What I built</h4><ul><li>A reporting platform for students.</li><li>Analytical dashboards summarizing service performance per category.</li><li>Admin views to support monitoring and decision-making.</li></ul></div>
+          <div class="case__block"><h4>Tech</h4><p>PHP, React.js, JavaScript, CSS, MySQL.</p></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. CV Generator -->
+    <article class="project card lift reveal" data-filter-item="projects" data-cat="frontend">
+      <div class="project__shot"><img src="images/projek4.png" alt="Instant CV PDF generator interface" loading="lazy"></div>
+      <div class="project__body">
+        <div class="project__meta"><span class="tag tag--caramel">Frontend</span></div>
+        <h3>Instant CV PDF Generator</h3>
+        <p class="project__summary">Fill a form, watch the CV preview update live, and download a clean PDF.</p>
+        <ul class="project__points">
+          <li>Bilingual structured form</li>
+          <li>Live preview + automated PDF export</li>
+        </ul>
+        <div class="stack"><span>React.js</span><span>Vite</span><span>JavaScript</span><span>jsPDF</span></div>
+        <div class="project__actions">
+          <button class="link-btn" data-modal-case>Case study <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+          <a class="project__link" href="https://isnaltfh.github.io/cv-instan-react/" target="_blank" rel="noopener">Live demo <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+        </div>
+      </div>
+      <div class="case" hidden>
+        <p class="case__eyebrow">Frontend · Personal project</p>
+        <h3 class="case__title">Instant CV PDF Generator</h3>
+        <div class="case__grid">
+          <div class="case__block"><h4>The problem</h4><p>Making a consistent, professional resume takes time and formatting effort.</p></div>
+          <div class="case__block"><h4>What I built</h4><ul><li>A bilingual CV builder with structured form input.</li><li>Real-time data processing into a live preview.</li><li>Automated PDF output with jsPDF.</li></ul></div>
+          <div class="case__block"><h4>Try it</h4><p><a href="https://isnaltfh.github.io/cv-instan-react/" target="_blank" rel="noopener">isnaltfh.github.io/cv-instan-react</a></p></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. Weatherly -->
+    <article class="project card lift reveal" data-filter-item="projects" data-cat="frontend">
+      <div class="project__shot"><img src="images/projek5.png" alt="Weatherly real-time weather application" loading="lazy"></div>
+      <div class="project__body">
+        <div class="project__meta"><span class="tag tag--caramel">Frontend · API</span></div>
+        <h3>Weatherly — Real-Time Weather App</h3>
+        <p class="project__summary">Search any city and get current weather plus a short forecast, with visuals that follow the conditions.</p>
+        <ul class="project__points">
+          <li>OpenWeatherMap API + geocoding</li>
+          <li>Local caching for faster repeat searches</li>
+        </ul>
+        <div class="stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>OpenWeatherMap</span></div>
+        <div class="project__actions">
+          <button class="link-btn" data-modal-case>Case study <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+          <a class="project__link" href="https://isnaltfh.github.io/weatherly/" target="_blank" rel="noopener">Live demo <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+        </div>
+      </div>
+      <div class="case" hidden>
+        <p class="case__eyebrow">Frontend · Personal project</p>
+        <h3 class="case__title">Weatherly — Real-Time Weather Application</h3>
+        <div class="case__grid">
+          <div class="case__block"><h4>What it does</h4><p>A responsive weather app that shows current conditions and upcoming days for any searched city.</p></div>
+          <div class="case__block"><h4>How it works</h4><ul><li>Third-party API integration (OpenWeatherMap).</li><li>Geocoding to turn a city name into coordinates.</li><li>Local caching of results.</li><li>Dynamic interface updates based on current weather.</li></ul></div>
+          <div class="case__block"><h4>Try it</h4><p><a href="https://isnaltfh.github.io/weatherly/" target="_blank" rel="noopener">isnaltfh.github.io/weatherly</a></p></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. NexaMind -->
+    <article class="project card lift reveal" data-filter-item="projects" data-cat="frontend">
+      <div class="project__shot"><img src="images/projek2.png" alt="NexaMind AI landing page" loading="lazy"></div>
+      <div class="project__body">
+        <div class="project__meta"><span class="tag tag--caramel">Frontend · Landing page</span></div>
+        <h3>NexaMind AI — Knowledge Workspace</h3>
+        <p class="project__summary">A responsive landing page for an AI workspace that helps teams search their knowledge.</p>
+        <ul class="project__points">
+          <li>Modern dark UI with search showcase</li>
+          <li>Feature highlights, FAQ, clear CTAs</li>
+        </ul>
+        <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <div class="project__actions">
+          <button class="link-btn" data-modal-case>Case study <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+          <a class="project__link" href="https://isnaltfh.github.io/nexamind-ai-landing-page/" target="_blank" rel="noopener">Live demo <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+        </div>
+      </div>
+      <div class="case" hidden>
+        <p class="case__eyebrow">Frontend · Personal project</p>
+        <h3 class="case__title">NexaMind AI — AI Knowledge Workspace</h3>
+        <div class="case__grid">
+          <div class="case__block"><h4>Goal</h4><p>Present an AI knowledge-workspace product clearly and guide visitors to sign up.</p></div>
+          <div class="case__block"><h4>What I built</h4><ul><li>Responsive landing page with a modern dark interface.</li><li>Knowledge-search experience mockup.</li><li>Feature highlights, FAQ and conversion-focused navigation.</li></ul></div>
+          <div class="case__block"><h4>Try it</h4><p><a href="https://isnaltfh.github.io/nexamind-ai-landing-page/" target="_blank" rel="noopener">isnaltfh.github.io/nexamind-ai-landing-page</a></p></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Always visible (not part of the filter) -->
+    <a class="project project--more reveal" href="https://github.com/isnaltfh" target="_blank" rel="noopener">
+      <span class="project--more__label">// more work</span>
+      <div>
+        <strong>More projects &amp; code on GitHub</strong>
+        <p>Coursework, experiments and side projects — including the source of this portfolio.</p>
+      </div>
+      <span class="project--more__link">github.com/isnaltfh <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span>
+    </a>
+
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="section container">
+  <p class="eyebrow reveal">Professional journey</p>
+  <h2 class="h2 reveal">Experience</h2>
+
+  <ol class="timeline">
+    <!-- Current role -->
+    <li class="reveal" style="--dot:#C0773A">
+      <article class="card lift xp">
+        <header class="xp__head">
+          <div>
+            <span class="xp__type xp__type--current"><span class="badge__dot"></span>Current · Internship</span>
+            <h3>Information Technology Developer</h3>
+            <p class="xp__org">Reethau Group · Jakarta Selatan (on-site)</p>
+          </div>
+          <span class="pill">Sep 2026 – Present</span>
+        </header>
+        <p class="xp__summary">Spearheaded the development of 3+ integrated web applications to digitalize business operations and strengthen the corporate digital presence of PT Reethau Energi Terbarukan.</p>
+
+        <ul class="xp__projects">
+          <li>
+            <h4>B2B Order Request &amp; Notification System</h4>
+            <p>Built a responsive order validation platform with automated email dispatching to accelerate client inquiries.</p>
+          </li>
+          <li>
+            <h4>Corporate Profile &amp; Compliance Portal</h4>
+            <p>Developed an informative company profile showcasing biomass production capacities and legal certifications (SVLK, ESKA, MEBI).</p>
+          </li>
+          <li>
+            <h4>Internal Workflow &amp; Data Management System</h4>
+            <p>Engineered backend solutions to organize operational data and streamline daily business processes.</p>
+          </li>
+        </ul>
+        <div class="stack"><span>Node.js</span><span>Laravel</span><span>PHP</span><span>JavaScript</span><span>CSS</span><span>MySQL</span></div>
+      </article>
+    </li>
+
+    <!-- Final project -->
+    <li class="reveal" style="--dot:#7B4A2A">
+      <article class="card lift xp">
+        <header class="xp__head">
+          <div>
+            <span class="xp__type xp__type--mocha">Final Project</span>
+            <h3>Final Project Researcher — Generative AI / RAG</h3>
+            <p class="xp__org">PT PLN Nusantara Power UP Muara Tawar</p>
+          </div>
+          <span class="pill">Apr – Jul 2026</span>
+        </header>
+        <p class="xp__summary">Developed, evaluated, and deployed an internal RAG application for technical-document retrieval.</p>
+
+        <div class="xp__metrics">
+          <div><strong>74</strong><span>technical PDFs</span></div>
+          <div><strong>20,573</strong><span>pages indexed</span></div>
+          <div><strong>0.83 / 1.00</strong><span>faithfulness / recall</span></div>
+          <div><strong>6 → &lt;3 min</strong><span>response time</span></div>
+        </div>
+
+        <div class="xp__cols">
+          <div>
+            <h4>What I did</h4>
+            <ul>
+              <li>Built the retrieval pipeline with Python, FastAPI, ChromaDB, BAAI/bge-m3, Ollama and LLM-based generation.</li>
+              <li>Evaluated with 20 questions validated by PLN technical personnel.</li>
+              <li>Optimized and deployed on Linux with Nginx and systemd.</li>
             </ul>
-          </article>
+          </div>
+        </div>
+        <div class="stack"><span>Python</span><span>FastAPI</span><span>ChromaDB</span><span>Ollama</span><span>Linux</span><span>Nginx</span><span>systemd</span></div>
+      </article>
+    </li>
 
-          <article class="service-card">
-            <div class="icon-badge">
-              <i
-                class="fa-solid fa-laptop-code"
-                aria-hidden="true"
-              ></i>
-            </div>
+    <!-- Internship -->
+    <li class="reveal" style="--dot:#5E7D6A">
+      <article class="card lift xp">
+        <header class="xp__head">
+          <div>
+            <span class="xp__type xp__type--sage">Internship</span>
+            <h3>IT Support Intern · Software Development Contributor</h3>
+            <p class="xp__org">PT PLN Nusantara Power UP Muara Tawar</p>
+          </div>
+          <span class="pill">Aug – Nov 2025</span>
+        </header>
+        <p class="xp__summary">Supported daily IT operations while contributing to internal application development and infrastructure troubleshooting.</p>
 
-            <h3>
-              Frontend Development
-            </h3>
+        <div class="xp__metrics">
+          <div><strong>50+</strong><span>employees supported</span></div>
+          <div><strong>50+</strong><span>incidents resolved</span></div>
+          <div><strong>20+</strong><span>workstations deployed</span></div>
+        </div>
 
-            <ul class="features">
-              <li>
-                Building responsive interfaces using React.js,
-                JavaScript, HTML, and CSS.
-              </li>
-
-              <li>
-                Implementing API integration, form processing,
-                state handling, and user-friendly feedback.
-              </li>
+        <div class="xp__cols">
+          <div>
+            <h4><span class="xp__dot bgs-sage"></span>IT Support</h4>
+            <ul>
+              <li>Resolved hardware, software, Windows, network and user-access incidents.</li>
+              <li>Deployed and configured workstations; ran hardware and network diagnostics across multiple office buildings.</li>
             </ul>
-          </article>
-
-          <article class="service-card">
-            <div class="icon-badge">
-              <i
-                class="fa-solid fa-screwdriver-wrench"
-                aria-hidden="true"
-              ></i>
-            </div>
-
-            <h3>
-              IT Support &amp; Infrastructure
-            </h3>
-
-            <ul class="features">
-              <li>
-                Performing hardware, software, operating system,
-                and network troubleshooting.
-              </li>
-
-              <li>
-                Supporting workstation deployment, user access,
-                connectivity, and technical documentation.
-              </li>
+          </div>
+          <div>
+            <h4><span class="xp__dot bgs-mocha"></span>Software Development</h4>
+            <ul>
+              <li>Contributed to a Laravel/MySQL procurement app (supplier, tender/project, CSMS, admin workflows).</li>
+              <li>Assisted with deployment, database configuration and Linux/server troubleshooting.</li>
             </ul>
-          </article>
-
-          <article class="service-card">
-            <div class="icon-badge">
-              <i
-                class="fa-solid fa-server"
-                aria-hidden="true"
-              ></i>
-            </div>
-
-            <h3>
-              System Deployment &amp; Integration
-            </h3>
-
-            <ul class="features">
-              <li>
-                Deploying internal applications on Linux virtual
-                machines using Nginx and systemd.
-              </li>
-
-              <li>
-                Monitoring services and resolving API, networking,
-                caching, and deployment issues.
-              </li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== SKILLS ==================== -->
-    <section id="skills">
-      <div class="services main-container">
-        <p class="pre-title">
-          Technical Skills
-        </p>
-
-        <h2 class="section-title">
-          Tools &amp; Technologies
-        </h2>
-
-        <div class="services-grid">
-          <article class="service-card">
-            <div class="icon-badge">
-              <i
-                class="fa-solid fa-terminal"
-                aria-hidden="true"
-              ></i>
-            </div>
-
-            <h3>
-              Languages
-            </h3>
-
-            <p>
-              Python, JavaScript, PHP, HTML, CSS, and SQL.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="icon-badge">
-              <i
-                class="fa-solid fa-layer-group"
-                aria-hidden="true"
-              ></i>
-            </div>
-
-            <h3>
-              Frameworks
-            </h3>
-
-            <p>
-              FastAPI, Laravel, React.js, Vite, and Tailwind CSS.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="icon-badge">
-              <i
-                class="fa-solid fa-brain"
-                aria-hidden="true"
-              ></i>
-            </div>
-
-            <h3>
-              AI &amp; Data
-            </h3>
-
-            <p>
-              RAG, ChromaDB, Ollama, Qwen2.5, Mistral, BAAI/bge-m3,
-              and MySQL.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="icon-badge">
-              <i
-                class="fa-solid fa-network-wired"
-                aria-hidden="true"
-              ></i>
-            </div>
-
-            <h3>
-              Infrastructure &amp; Tools
-            </h3>
-
-            <p>
-              Linux, Ubuntu, Nginx, systemd, VMware, Git,
-              GitHub, VS Code, and Postman.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== PORTFOLIO ==================== -->
-    <section id="portfolios">
-      <div class="main-container">
-        <p class="pre-title">
-          My Works
-        </p>
-
-        <h2 class="section-title">
-          Featured Work
-        </h2>
-
-        <div class="portfolio-grid">
-          <!-- Project 1 -->
-          <article class="portfolio-card">
-            <figure class="portfolio-media">
-              <img
-                src="./images/chatbot.png"
-                alt="PLN NP Internal RAG Chatbot interface"
-                loading="lazy"
-              />
-            </figure>
-
-            <div class="portfolio-body">
-              <header class="portfolio-head">
-                <h3 class="portfolio-name">
-                  PLN NP Internal RAG Chatbot
-                </h3>
-
-                <span
-                  class="open-icon"
-                  title="Private internal project"
-                  aria-label="Private internal project"
-                >
-                  <i class="fa-solid fa-lock"></i>
-                </span>
-              </header>
-
-              <div class="portfolio-tags">
-                <span>Python</span>
-                <span>FastAPI</span>
-                <span>ChromaDB</span>
-                <span>BAAI/bge-m3</span>
-                <span>Ollama</span>
-                <span>Qwen2.5</span>
-                <span>Linux</span>
-                <span>Nginx</span>
-              </div>
-
-              <p class="portfolio-desc">
-                Designed and deployed an internal
-                Retrieval-Augmented Generation chatbot as a final
-                project during a six-month placement at PT PLN
-                Nusantara Power. Built the FastAPI backend,
-                ChromaDB retrieval pipeline, document references,
-                request cancellation, and Linux deployment using
-                Nginx and systemd.
-              </p>
-            </div>
-          </article>
-
-          <!-- Project 2 -->
-          <article class="portfolio-card">
-            <figure class="portfolio-media">
-              <img
-                src="./images/projek6.png"
-                alt="PLN internal procurement and administration system"
-                loading="lazy"
-              />
-            </figure>
-
-            <div class="portfolio-body">
-              <header class="portfolio-head">
-                <h3 class="portfolio-name">
-                  PLN Internal Procurement &amp; Administration System
-                </h3>
-
-                <span
-                  class="open-icon"
-                  title="Private internal project"
-                  aria-label="Private internal project"
-                >
-                  <i class="fa-solid fa-lock"></i>
-                </span>
-              </header>
-
-              <div class="portfolio-tags">
-                <span>Laravel</span>
-                <span>PHP</span>
-                <span>MySQL</span>
-                <span>Backend Development</span>
-              </div>
-
-              <p class="portfolio-desc">
-                Contributed to an internal procurement and
-                administrative application using Laravel and
-                MySQL. Worked on data workflows, backend
-                controllers, reporting, and application
-                maintenance to support operational processes.
-              </p>
-            </div>
-          </article>
-
-          <!-- Project 3 -->
-          <article class="portfolio-card">
-            <figure class="portfolio-media">
-              <img
-                src="./images/projek_simpel.png"
-                alt="SIMPEL student reporting system dashboard"
-                loading="lazy"
-              />
-            </figure>
-
-            <div class="portfolio-body">
-              <header class="portfolio-head">
-                <h3 class="portfolio-name">
-                  Sistem Informasi Pelaporan Mahasiswa (SIMPEL)
-                </h3>
-
-                <a
-                  href="https://github.com/isnaltfh"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="open-icon"
-                  aria-label="View project repository"
-                >
-                  <i
-                    class="fa-solid fa-arrow-up-right-from-square"
-                  ></i>
-                </a>
-              </header>
-
-              <div class="portfolio-tags">
-                <span>PHP</span>
-                <span>React.js</span>
-                <span>JavaScript</span>
-                <span>CSS</span>
-                <span>MySQL</span>
-              </div>
-
-              <p class="portfolio-desc">
-                Developed a student reporting platform with
-                analytical dashboards to support campus facility
-                reporting, service monitoring, and administrative
-                decision-making.
-              </p>
-            </div>
-          </article>
-
-          <!-- Project 4 -->
-          <article class="portfolio-card">
-            <figure class="portfolio-media">
-              <img
-                src="./images/projek4.png"
-                alt="Instant CV PDF generator interface"
-                loading="lazy"
-              />
-            </figure>
-
-            <div class="portfolio-body">
-              <header class="portfolio-head">
-                <h3 class="portfolio-name">
-                  Instant CV PDF Generator
-                </h3>
-
-                <a
-                  href="https://isnaltfh.github.io/cv-instan-react/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="open-icon"
-                  aria-label="View project repository"
-                >
-                  <i
-                    class="fa-solid fa-arrow-up-right-from-square"
-                  ></i>
-                </a>
-              </header>
-
-              <div class="portfolio-tags">
-                <span>React.js</span>
-                <span>Vite</span>
-                <span>JavaScript</span>
-                <span>jsPDF</span>
-              </div>
-
-              <p class="portfolio-desc">
-                Built a bilingual CV generator with structured form
-                input, real-time data processing, and automated PDF
-                output for creating consistent professional resumes.
-              </p>
-            </div>
-          </article>
-
-          <!-- Project 5 -->
-          <article class="portfolio-card">
-            <figure class="portfolio-media">
-              <img
-                src="./images/projek5.png"
-                alt="Weatherly real-time weather application"
-                loading="lazy"
-              />
-            </figure>
-
-            <div class="portfolio-body">
-              <header class="portfolio-head">
-                <h3 class="portfolio-name">
-                  Weatherly — Real-Time Weather Application
-                </h3>
-
-                <a
-                  href="https://isnaltfh.github.io/weatherly/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="open-icon"
-                  aria-label="View project repository"
-                >
-                  <i
-                    class="fa-solid fa-arrow-up-right-from-square"
-                  ></i>
-                </a>
-              </header>
-
-              <div class="portfolio-tags">
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>JavaScript</span>
-                <span>OpenWeatherMap API</span>
-              </div>
-
-              <p class="portfolio-desc">
-                Developed a responsive weather application
-                integrating a third-party API, geocoding, local
-                caching, and dynamic interface updates based on
-                current weather conditions.
-              </p>
-            </div>
-          </article>
-
-          <!-- Project 6 -->
-          <article class="portfolio-card">
-            <figure class="portfolio-media">
-              <img
-                src="./images/projek2.png"
-                alt="Habit and study tracker web application"
-                loading="lazy"
-              />
-            </figure>
-
-            <div class="portfolio-body">
-              <header class="portfolio-head">
-                <h3 class="portfolio-name">
-                  NexaMind AI — AI Knowledge Workspace
-                </h3>
-
-                <a
-                  href="https://isnaltfh.github.io/nexamind-ai-landing-page/#faq"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="open-icon"
-                  aria-label="View project repository"
-                >
-                  <i
-                    class="fa-solid fa-arrow-up-right-from-square"
-                  ></i>
-                </a>
-              </header>
-
-              <div class="portfolio-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-
-              <p class="portfolio-desc">
-                Designed and developed a responsive AI workspace landing page featuring a 
-                modern dark interface, knowledge search experience, feature highlights, 
-                and conversion-focused navigation.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== EXPERIENCE ==================== -->
-    <section
-      id="experience"
-      class="experience-section"
-    >
-      <div class="main-container">
-        <p class="pre-title">
-          Professional Journey
-        </p>
-
-        <h2 class="section-title">
-          Experience &amp; Education
-        </h2>
-
-        <div class="exp-grid">
-          <!-- Experience column -->
-          <div class="exp-col">
-            <h3 class="exp-heading">
-              Experience
-            </h3>
-
-            <ol class="exp-timeline">
-              <!-- PLN Experience -->
-              <li
-                class="exp-item"
-                data-anim="left"
-              >
-                <div
-                  class="exp-side"
-                  aria-hidden="true"
-                >
-                  <div class="exp-dot"></div>
-                  <div class="exp-line"></div>
-                </div>
-
-                <article class="exp-card">
-                  <header class="exp-head">
-                    <h4 class="exp-role">
-                     Final Project Researcher — Generative AI / RAG Application
-                      — PT PLN Nusantara Power UP Muara Tawar
-                    </h4>
-
-                    <span class="exp-dates">
-                      Apr 2026 – Jul 2026
-                    </span>
-                  </header>
-
-                  <p class="exp-summary">
-                    Developed, evaluated, and deployed an internal Retrieval-Augmented Generation (RAG) 
-                    application for technical-document retrieval.
-                  </p>
-
-                  <ul class="exp-bullets">
-                    <li>
-                      Developed a RAG system over 74 technical PDF documents totaling 20,573 pages.
-                    </li>
-
-                    <li>
-                      Built the retrieval pipeline using Python, 
-                      FastAPI, ChromaDB, BAAI/bge-m3, Ollama, and LLM-based generation.
-                    </li>
-
-                    <li>
-                      Evaluated the system using 20 questions validated 
-                      by PLN technical personnel, achieving 0.83 Faithfulness and 1.00 Context Recall.
-                    </li>
-
-                    <li>
-                      Optimized and deployed the application on Linux using Nginx and systemd, 
-                      reducing response time from approximately 6 minutes to under 3 minutes per query.
-                    </li>
-                  </ul>
-                </article>
-              </li>
-               <li
-                class="exp-item"
-                data-anim="left"
-              >
-                <div
-                  class="exp-side"
-                  aria-hidden="true"
-                >
-                  <div class="exp-dot"></div>
-                  <div class="exp-line"></div>
-                </div>
-
-                <article class="exp-card">
-                  <header class="exp-head">
-                    <h4 class="exp-role">
-                      IT Support Intern | Software Development Contributor
-                      PT PLN Nusantara Power UP Muara Tawar
-                    </h4>
-
-                    <span class="exp-dates">
-                      Aug 2025 – Nov 2025
-                    </span>
-                  </header>
-
-                  <p class="exp-summary">
-                    Supported daily IT operations while 
-                    contributing to internal application development and 
-                    infrastructure troubleshooting.
-                  </p>
-
-                  <ul class="exp-bullets">
-                    <li>
-                      Supported 50+ employees and resolved 50+ technical incidents 
-                      involving hardware, software, Windows, network connectivity, and user access.
-                    </li>
-
-                    <li>
-                      Deployed and configured 20+ workstations and performed 
-                      hardware and network diagnostics across multiple office buildings.
-                    </li>
-
-                    <li>
-                      Contributed to the continued development of a Laravel/MySQL 
-                      procurement application supporting supplier, tender/project, CSMS, 
-                      and administrative workflows.
-                    </li>
-
-                    <li>
-                      Assisted with application deployment, database configuration, and Linux/server troubleshooting.
-                    </li>
-                  </ul>
-                </article>
-              </li>
-
-              <!-- AI/ML Class Manager -->
-              <li
-                class="exp-item"
-                data-anim="left"
-              >
-                <div
-                  class="exp-side"
-                  aria-hidden="true"
-                >
-                  <div class="exp-dot"></div>
-                  <div class="exp-line"></div>
-                </div>
-
-                <article class="exp-card">
-                  <header class="exp-head">
-                    <h4 class="exp-role">
-                      Class Manager — Weekly Class AI/ML Beginner,
-                      GDGOC UIN Jakarta
-                    </h4>
-
-                    <span class="exp-dates">
-                      Mar – May 2025
-                    </span>
-                  </header>
-
-                  <p class="exp-summary">
-                    <ul class="exp-bullets">
-                    <li>Led operational coordination for an AI/ML beginner program serving 100+ participants, 
-                    managing mentor schedules, class delivery, participant communication, and weekly 
-                    learning activities.
-                    </li>
-                    
-                    <li>Contributed to a 91% final project/team completion rate and an 8.0 Weekly Class NPS.</li>
-                    </ul>
-                  </p>
-                </article>
-              </li>
-
-              <!-- Company Visit -->
-              <li
-                class="exp-item"
-                data-anim="left"
-              >
-                <div
-                  class="exp-side"
-                  aria-hidden="true"
-                >
-                  <div class="exp-dot"></div>
-                  <div class="exp-line"></div>
-                </div>
-
-                <article class="exp-card">
-                  <header class="exp-head">
-                    <h4 class="exp-role">
-                      Organizing Committee — Company Visit to DKatalis (Bank Jago)
-                    </h4>
-
-                    <span class="exp-dates">
-                      Jun 2025
-                    </span>
-                  </header>
-
-                  <p class="exp-summary">
-                    Coordinated participant management and event operations for an inter-campus 
-                    company visit involving 50+ participants, covering registration, logistics, 
-                    digital publication, and external communication.
-                  </p>
-                </article>
-              </li>
-
-              <!-- Event Staff -->
-              <li
-                class="exp-item"
-                data-anim="left"
-              >
-                <div
-                  class="exp-side"
-                  aria-hidden="true"
-                >
-                  <div class="exp-dot"></div>
-                  <div class="exp-line"></div>
-                </div>
-
-                <article class="exp-card">
-                  <header class="exp-head">
-                    <h4 class="exp-role">
-                      Event Staff — GDGOC UIN Syarif Hidayatullah
-                      Jakarta
-                    </h4>
-
-                    <span class="exp-dates">
-                      Oct 2024 – Aug 2025
-                    </span>
-                  </header>
-
-                  <p class="exp-summary">
-                    Supported technology programs that contributed to GDGOC UIN Jakarta 
-                    being recognized as #1 Most Active Chapter and #1 Most Impactful Chapter 
-                    in Indonesia, delivering 55 events and engaging 500+ partners and members.
-                  </p>
-                </article>
-              </li>
-            </ol>
-          </div>
-
-          <!-- Education column -->
-          <div class="exp-col">
-            <h3 class="exp-heading">
-              Education
-            </h3>
-
-            <article
-              class="exp-card"
-              data-anim="right"
-            >
-              <header class="exp-head">
-                <h4 class="exp-role">
-                  UIN Syarif Hidayatullah Jakarta
-                </h4>
-
-                <span class="exp-dates">
-                  Aug 2022 – Jul 2026
-                </span>
-              </header>
-
-              <p class="exp-summary">
-                Bachelor of Informatics Engineering
-                <br />
-                GPA: 3.58/4.00 — Cum Laude
-              </p>
-            </article>
-
-            <article
-              class="exp-card"
-              data-anim="right"
-            >
-              <header class="exp-head">
-                <h4 class="exp-role">
-                  Selected Certifications
-                </h4>
-              </header>
-
-              <ul class="exp-bullets">
-                <li>
-                  Cisco Networking Academy — Network Support and Security — 2024
-                </li>
-
-                <li>
-                  Cisco Networking Academy — CCNAv7: Introduction to Networks — 2023
-                </li>
-
-                <li>
-                  Cisco Networking Academy — Endpoint Security — 2024
-                </li>
-
-                <li>
-                  Cisco Networking Academy — Network Defense — 2024
-                </li>
-
-                <li>
-                  Cisco Networking Academy — Introduction to Cybersecurity — 2024
-                </li>
-
-                <li>
-                  Red Hat Academy — Red Hat System Administration I (RH124) — 2024
-                </li>
-
-                <li>
-                  Red Hat Academy — Red Hat System Administration II (RH134) — 2024
-                </li>
-
-                <li>
-                  AWS Academy — Cloud Foundations — 2025
-                </li>
-
-                <li>
-                  Samsung Innovation Campus Batch 7 — Stage 1: Code Kickstart: Python Programming — 2025
-                </li>
-
-                <li>
-                  Huawei Talent Online — AI Basics: Overview of Artificial Intelligence — 2023
-                </li>
-
-                <li>
-                  GDSC UIN Syarif Hidayatullah Jakarta — UI/UX Weekly Class — 2023
-                </li>
-
-                <li>
-                  English Proficiency Test (EPT) — UIN Syarif Hidayatullah Jakarta — 2026 — Score: 503
-                </li>
-
-              </ul>
-            </article>
           </div>
         </div>
+        <div class="stack"><span>Windows</span><span>Networking</span><span>Laravel</span><span>MySQL</span><span>Linux</span></div>
+      </article>
+    </li>
+  </ol>
+
+  <!-- Education + organizations -->
+  <h3 class="sub-title reveal">Education &amp; organizations</h3>
+  <div class="org-grid">
+    <article class="edu reveal">
+      <p class="edu__label">Education</p>
+      <h3>UIN Syarif Hidayatullah Jakarta</h3>
+      <p>Bachelor of Informatics Engineering<br>Aug 2022 – Jul 2026</p>
+      <span class="edu__gpa">GPA 3.58 / 4.00 — Cum Laude</span>
+    </article>
+    <article class="org card lift reveal">
+      <span class="pill">Mar – May 2025</span>
+      <h3>Class Manager — Weekly Class AI/ML Beginner</h3>
+      <p class="xp__org">GDGOC UIN Jakarta</p>
+      <p>Coordinated mentors, schedules and weekly classes for 100+ participants.</p>
+      <div class="org__stats"><span><strong>91%</strong> completion</span><span><strong>8.0</strong> NPS</span></div>
+    </article>
+    <article class="org card lift reveal">
+      <span class="pill">Jun 2025</span>
+      <h3>Organizing Committee — Company Visit to DKatalis (Bank Jago)</h3>
+      <p class="xp__org">Inter-campus event</p>
+      <p>Handled registration, logistics, digital publication and external communication.</p>
+      <div class="org__stats"><span><strong>50+</strong> participants</span></div>
+    </article>
+    <article class="org card lift reveal">
+      <span class="pill">Oct 2024 – Aug 2025</span>
+      <h3>Event Staff</h3>
+      <p class="xp__org">GDGOC UIN Syarif Hidayatullah Jakarta</p>
+      <p>Chapter recognized as #1 Most Active and #1 Most Impactful in Indonesia.</p>
+      <div class="org__stats"><span><strong>55</strong> events</span><span><strong>500+</strong> members</span></div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATES ============ -->
+<!-- Put certificate images in images/certificates/ (names in README.txt there).
+     Until a file exists, a styled placeholder is shown automatically.
+     Two rows slide sideways (js/modules/marquee.js); hover pauses, click enlarges. -->
+<section id="certificates" class="section">
+  <div class="container">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow reveal">Certifications</p>
+        <h2 class="h2 reveal">Licenses &amp; certificates</h2>
       </div>
-    </section>
+      <p class="section__sub reveal">21 certificates — technical credentials, courses and community roles. Hover a row to pause, click a certificate to view it.</p>
+    </div>
+  </div>
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer
-      id="footer"
-      class="site-footer"
-    >
-      <div class="footer-wrap main-container">
-        <div class="footer-centered">
-          <div class="footer-profile">
-            <div class="footer-avatar">
-              DL
-            </div>
+  <div class="container"><p class="cert-rail__label reveal">Technical certifications <span>8</span></p></div>
+  <div class="cert-rail reveal">
+    <div class="cert-rail__track" data-marquee>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/redhat-rh124.jpg" alt="Red Hat System Administration I (RH124) certificate" data-fallback><span class="cert__mark">Red Hat</span></span>
+        <span class="cert__body"><span class="cert__issuer">Red Hat Academy · 2024</span><strong class="cert__name">Red Hat System Administration I (RH124)</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/redhat-rh134.jpg" alt="Red Hat System Administration II (RH134) certificate" data-fallback><span class="cert__mark">Red Hat</span></span>
+        <span class="cert__body"><span class="cert__issuer">Red Hat Academy · 2024</span><strong class="cert__name">Red Hat System Administration II (RH134)</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/aws-cloud-foundations.jpg" alt="AWS Academy Cloud Foundations certificate" data-fallback><span class="cert__mark">AWS</span></span>
+        <span class="cert__body"><span class="cert__issuer">AWS Academy · 2025</span><strong class="cert__name">AWS Academy Cloud Foundations</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb cert__thumb--portrait" data-fallback-wrap><img src="images/certificates/cisco-ccna-itn.jpg" alt="CCNAv7: Introduction to Networks certificate" data-fallback><span class="cert__mark">Cisco</span></span>
+        <span class="cert__body"><span class="cert__issuer">Cisco Networking Academy · 2023</span><strong class="cert__name">CCNAv7: Introduction to Networks</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/cisco-network-support-security.jpg" alt="Network Support and Security certificate" data-fallback><span class="cert__mark">Cisco</span></span>
+        <span class="cert__body"><span class="cert__issuer">Cisco Networking Academy · 2024</span><strong class="cert__name">Network Support and Security</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/cisco-network-defense.jpg" alt="Network Defense certificate" data-fallback><span class="cert__mark">Cisco</span></span>
+        <span class="cert__body"><span class="cert__issuer">Cisco Networking Academy · 2024</span><strong class="cert__name">Network Defense</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/cisco-endpoint-security.jpg" alt="Endpoint Security certificate" data-fallback><span class="cert__mark">Cisco</span></span>
+        <span class="cert__body"><span class="cert__issuer">Cisco Networking Academy · 2024</span><strong class="cert__name">Endpoint Security</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/cisco-intro-cybersecurity.jpg" alt="Introduction to Cybersecurity certificate" data-fallback><span class="cert__mark">Cisco</span></span>
+        <span class="cert__body"><span class="cert__issuer">Cisco Networking Academy · 2024</span><strong class="cert__name">Introduction to Cybersecurity</strong></span>
+      </button>
+    </div>
+  </div>
+  <div class="container"><p class="cert-rail__label reveal">Courses, language &amp; internship <span>5</span></p></div>
+  <div class="cert-rail cert-rail--reverse reveal">
+    <div class="cert-rail__track" data-marquee>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/samsung-sic-python.jpg" alt="Code Kickstart: Python Programming certificate" data-fallback><span class="cert__mark">Samsung</span></span>
+        <span class="cert__body"><span class="cert__issuer">Samsung Innovation Campus Batch 7 · 2025</span><strong class="cert__name">Code Kickstart: Python Programming</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb cert__thumb--portrait" data-fallback-wrap><img src="images/certificates/huawei-ai-basics.jpg" alt="AI Basics: Overview of AI certificate" data-fallback><span class="cert__mark">Huawei</span></span>
+        <span class="cert__body"><span class="cert__issuer">Huawei Talent Online · 2023</span><strong class="cert__name">AI Basics: Overview of AI</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/gdsc-uiux.jpg" alt="UI/UX Weekly Class — Completion certificate" data-fallback><span class="cert__mark">GDSC</span></span>
+        <span class="cert__body"><span class="cert__issuer">GDSC UIN Jakarta · 2023</span><strong class="cert__name">UI/UX Weekly Class — Completion</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/ept-uin.jpg" alt="English Proficiency Test — Score 503 certificate" data-fallback><span class="cert__mark">EPT 503</span></span>
+        <span class="cert__body"><span class="cert__issuer">UIN Syarif Hidayatullah Jakarta · 2026</span><strong class="cert__name">English Proficiency Test — Score 503</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb cert__thumb--portrait" data-fallback-wrap><img src="images/certificates/pln-internship-letter.jpg" alt="Internship Letter — UP Muara Tawar certificate" data-fallback><span class="cert__mark">PLN NP</span></span>
+        <span class="cert__body"><span class="cert__issuer">PT PLN Nusantara Power · 2025</span><strong class="cert__name">Internship Letter — UP Muara Tawar</strong></span>
+      </button>
+    </div>
+  </div>
+  <div class="container"><p class="cert-rail__label reveal">Community &amp; leadership · GDGoC UIN Jakarta <span>8</span></p></div>
+  <div class="cert-rail reveal">
+    <div class="cert-rail__track" data-marquee>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/gdgoc-class-manager-aiml.jpg" alt="Class Manager — Weekly Class AI/ML Beginner certificate" data-fallback><span class="cert__mark">GDGoC</span></span>
+        <span class="cert__body"><span class="cert__issuer">GDGoC UIN Jakarta · Mar–Apr 2025</span><strong class="cert__name">Class Manager — Weekly Class AI/ML Beginner</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/gdgoc-mc-agentic-ai.jpg" alt="Master of Ceremony — Tech Talk: Agentic AI certificate" data-fallback><span class="cert__mark">GDGoC</span></span>
+        <span class="cert__body"><span class="cert__issuer">GDGoC UIN Jakarta · Feb 2025</span><strong class="cert__name">Master of Ceremony — Tech Talk: Agentic AI</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/gdgoc-mc-python.jpg" alt="Master of Ceremony — AI/ML: Python &amp; Basic Programming certificate" data-fallback><span class="cert__mark">GDGoC</span></span>
+        <span class="cert__body"><span class="cert__issuer">GDGoC UIN Jakarta · Mar 2025</span><strong class="cert__name">Master of Ceremony — AI/ML: Python &amp; Basic Programming</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/gdgoc-moderator-pitching.jpg" alt="Moderator — AI/ML: Pitching certificate" data-fallback><span class="cert__mark">GDGoC</span></span>
+        <span class="cert__body"><span class="cert__issuer">GDGoC UIN Jakarta · Apr 2025</span><strong class="cert__name">Moderator — AI/ML: Pitching</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/gdgoc-mc-closing.jpg" alt="Master of Ceremony — AI/ML: Closing certificate" data-fallback><span class="cert__mark">GDGoC</span></span>
+        <span class="cert__body"><span class="cert__issuer">GDGoC UIN Jakarta · Apr 2025</span><strong class="cert__name">Master of Ceremony — AI/ML: Closing</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/gdgoc-mc-uiux-prototype.jpg" alt="Master of Ceremony — UI/UX Design: Prototype certificate" data-fallback><span class="cert__mark">GDGoC</span></span>
+        <span class="cert__body"><span class="cert__issuer">GDGoC UIN Jakarta · Jan 2025</span><strong class="cert__name">Master of Ceremony — UI/UX Design: Prototype</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/gdgoc-committee-dkatalis.jpg" alt="Organizing Committee — Company Visit to DKatalis certificate" data-fallback><span class="cert__mark">GDGoC</span></span>
+        <span class="cert__body"><span class="cert__issuer">GDGoC UIN Jakarta · Jun 2025</span><strong class="cert__name">Organizing Committee — Company Visit to DKatalis</strong></span>
+      </button>
+      <button class="cert" data-modal-image>
+        <span class="cert__thumb" data-fallback-wrap><img src="images/certificates/gdsc-uiux-championship.jpg" alt="Logistic Volunteer — UI/UX Championship certificate" data-fallback><span class="cert__mark">GDSC</span></span>
+        <span class="cert__body"><span class="cert__issuer">GDSC UIN Jakarta · 2024</span><strong class="cert__name">Logistic Volunteer — UI/UX Championship</strong></span>
+      </button>
+    </div>
+  </div>
+</section>
 
-            <h3 class="footer-name">
-              Dede Latifa Isnaini
-            </h3>
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section container">
+  <div class="contact reveal">
+    <div class="contact__intro">
+      <p class="eyebrow">Contact</p>
+      <h2 class="h2">Let's build something useful together.</h2>
+      <p>Open to Software Engineering, Generative AI / RAG, Frontend and IT Support roles — on-site, hybrid or remote.</p>
+    </div>
+    <ul class="contact__list">
+      <li><a href="mailto:isnaltfh08@gmail.com"><small>Email</small><span>isnaltfh08@gmail.com</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+      <li><a href="https://wa.me/62895639434882" target="_blank" rel="noopener"><small>WhatsApp</small><span>+62 895-6394-34882</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+      <li><a href="https://www.linkedin.com/in/dede-latifa-isnaini-3837542a4" target="_blank" rel="noopener"><small>LinkedIn</small><span>Dede Latifa Isnaini</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+    </ul>
+  </div>
+</section>
 
-            <p class="footer-role">
-              Fresh graduate in Informatics Engineering with hands-on
-              experience in software development, AI/RAG applications,
-              frontend development, IT support, and Linux-based deployment.
-            </p>
+</main>
 
-            <div
-              class="footer-socials"
-              aria-label="Social media links"
-            >
-              <a
-                href="https://www.instagram.com/isnaaltfh_/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <i class="fa-brands fa-instagram"></i>
-              </a>
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© 2026 Dede Latifa Isnaini · North Bekasi, Indonesia</span>
+    <span class="footer__links">
+      <a href="https://github.com/isnaltfh" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/dede-latifa-isnaini-3837542a4" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/isnaaltfh_/" target="_blank" rel="noopener">Instagram</a>
+    </span>
+  </div>
+</footer>
 
-              <a
-                href="https://www.linkedin.com/in/dede-latifa-isnaini-3837542a4"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
+<!-- ============ MODAL (case studies & certificates) — js/modules/modal.js ============ -->
+<dialog class="modal" id="modal" aria-label="Details">
+  <div class="modal__panel">
+    <button class="modal__close" id="modalClose" aria-label="Close">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    <div class="modal__body" id="modalBody"></div>
+  </div>
+</dialog>
 
-              <a
-                href="https://github.com/isnaltfh"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-              >
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+</button>
 
-        <div class="footer-col">
-          <h4 class="footer-heading">
-            Quick Links
-          </h4>
-
-          <ul class="footer-links">
-            <li>
-              <a href="#hero">Home</a>
-            </li>
-
-            <li>
-              <a href="#about">About</a>
-            </li>
-
-            <li>
-              <a href="#services">Expertise</a>
-            </li>
-
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-
-            <li>
-              <a href="#portfolios">Portfolio</a>
-            </li>
-
-            <li>
-              <a href="#experience">Experience</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-heading">
-            Contact Me
-          </h4>
-
-          <div class="footer-contact">
-            <span class="icon">
-              <i
-                class="fa-solid fa-location-dot"
-                aria-hidden="true"
-              ></i>
-            </span>
-
-            <span>
-              North Bekasi, Indonesia
-            </span>
-          </div>
-
-          <div class="footer-contact">
-            <span class="icon">
-              <i
-                class="fa-solid fa-envelope"
-                aria-hidden="true"
-              ></i>
-            </span>
-
-            <a href="mailto:isnaltfh08@gmail.com">
-              isnaltfh08@gmail.com
-            </a>
-          </div>
-
-          <div class="footer-contact">
-            <span class="icon">
-              <i
-                class="fa-solid fa-phone"
-                aria-hidden="true"
-              ></i>
-            </span>
-
-            <a
-              href="https://wa.me/62895639434882"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              (+62) 895-6394-34882
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>
-          © 2026 Dede Latifa Isnaini.
-          Designed &amp; developed with care.
-        </p>
-      </div>
-    </footer>
-
-    <!-- Main JavaScript -->
-    <script src="./scripts/main.js"></script>
-
-    <!-- Experience animation -->
-    <script>
-      (() => {
-        const experienceSection =
-          document.querySelector("#experience");
-
-        if (!experienceSection) {
-          return;
-        }
-
-        const cards =
-          experienceSection.querySelectorAll(".exp-card");
-
-        if (
-          !("IntersectionObserver" in window) ||
-          cards.length === 0
-        ) {
-          cards.forEach((card) => {
-            card.classList.add("in");
-          });
-
-          return;
-        }
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (!entry.isIntersecting) {
-                return;
-              }
-
-              const delay =
-                Number.parseInt(
-                  entry.target.dataset.stagger,
-                  10
-                ) || 0;
-
-              window.setTimeout(() => {
-                entry.target.classList.add("in");
-              }, delay);
-
-              observer.unobserve(entry.target);
-            });
-          },
-          {
-            threshold: 0.2,
-          }
-        );
-
-        cards.forEach((card, index) => {
-          card.dataset.stagger =
-            String((index % 2) * 120);
-
-          observer.observe(card);
-        });
-      })();
-    </script>
-  </body>
+<!-- Features (one file each). Order does not matter, main.js must stay last. -->
+<script src="js/modules/navbar.js"></script>
+<script src="js/modules/cvDropdown.js"></script>
+<script src="js/modules/imageFallback.js"></script>
+<script src="js/modules/scrollReveal.js"></script>
+<script src="js/modules/counter.js"></script>
+<script src="js/modules/marquee.js"></script>
+<script src="js/modules/filter.js"></script>
+<script src="js/modules/modal.js"></script>
+<script src="js/modules/backToTop.js"></script>
+<script src="js/modules/theme.js"></script>
+<script src="js/main.js"></script>
+</body>
 </html>

@@ -1,0 +1,35 @@
+/* =========================================================
+   MAIN STYLESHEET (entry point)
+   Only imports — do not write styles here.
+   Order matters: tokens → base → components → layout → sections → utilities
+   ========================================================= */
+
+/* 1. Base */
+@import url("base/variables.css");
+@import url("base/reset.css");
+@import url("base/typography.css");
+
+/* 2. Components (reusable pieces) */
+@import url("components/buttons.css");
+@import url("components/cards.css");
+@import url("components/dropdown.css");
+@import url("components/modal.css");
+
+/* 3. Layout (appears on every page) */
+@import url("layout/navbar.css");
+@import url("layout/footer.css");
+
+/* 4. Sections (one file per section of index.html) */
+@import url("sections/hero.css");
+@import url("sections/marquee.css");
+@import url("sections/about.css");
+@import url("sections/expertise.css");
+@import url("sections/skills.css");
+@import url("sections/portfolio.css");
+@import url("sections/experience.css");
+@import url("sections/certificates.css");
+@import url("sections/contact.css");
+
+/* 5. Utilities (always last so they can override) */
+@import url("utilities/animations.css");
+@import url("utilities/responsive.css");

@@ -1,0 +1,36 @@
+/* =========================================================
+   SECTION: TECH MARQUEE (running strip under the hero)
+   Items are duplicated by js/modules/marquee.js for a seamless loop
+   ========================================================= */
+.marquee {
+  padding: 18px 0;
+  overflow: hidden;
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+.marquee__track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: marquee var(--duration, 34s) linear infinite;
+}
+.marquee:hover .marquee__track { animation-play-state: paused; }
+
+.marquee__track span {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 4px;
+  color: var(--mocha-dark);
+  font-family: var(--font-label);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.marquee__track span::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 1px;
+  transform: rotate(45deg);
+  background: var(--caramel);
+}

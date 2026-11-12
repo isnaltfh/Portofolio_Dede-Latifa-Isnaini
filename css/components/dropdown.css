@@ -1,0 +1,37 @@
+/* =========================================================
+   DROPDOWN (Download CV)
+   Opened by js/modules/cvDropdown.js → adds .is-open
+   ========================================================= */
+.dropdown { position: relative; }
+
+.ic--chev { transition: transform .3s; }
+.dropdown.is-open .ic--chev { transform: rotate(180deg); }
+
+.dropdown__menu {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 320px;
+  padding: 8px;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  box-shadow: 0 24px 50px -16px rgba(0, 0, 0, .45);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity .25s, transform .25s var(--ease), visibility .25s;
+}
+.dropdown.is-open .dropdown__menu { opacity: 1; visibility: visible; transform: none; }
+
+.dropdown__menu a {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: var(--ink);
+  transition: background .2s;
+}
+.dropdown__menu a:hover { background: var(--latte); color: var(--ink); }
+.dropdown__menu strong { display: block; font-size: 15px; }
+.dropdown__menu span { display: block; margin-top: 2px; font-size: 13px; color: var(--soft); }

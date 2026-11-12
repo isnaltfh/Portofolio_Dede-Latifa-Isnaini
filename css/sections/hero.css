@@ -1,0 +1,110 @@
+/* =========================================================
+   SECTION: HERO  (#hero)
+   Intro text, coding-girl illustration, floating cards, stats
+   ========================================================= */
+.hero { position: relative; padding-top: 80px; padding-bottom: 72px; }
+
+.hero__grid { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: 48px; }
+.hero__text { flex: 999 1 540px; min-width: 0; }
+.hero__visual { position: relative; flex: 1 1 360px; min-width: 0; display: flex; justify-content: center; }
+
+/* "Open to Work" badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: var(--sage-tint);
+  border: 1px solid var(--sage-line);
+  color: var(--sage-dark);
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 600;
+}
+.badge__dot { width: 9px; height: 9px; border-radius: 50%; background: var(--sage); animation: pulseDot 2s infinite; }
+
+.hero .eyebrow { margin-top: 26px; }
+.hero__title {
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  line-height: 1;
+  letter-spacing: -.015em;
+}
+.caret { color: var(--caramel); animation: blink 1s step-end infinite; }
+.hero__lead { max-width: 620px; margin: 24px 0 0; font-size: 18px; line-height: 1.7; color: var(--muted); }
+/* position + z-index keep the Download CV menu ABOVE the social icons and
+   stats below it (fade-in animations give each block its own layer) */
+.hero__actions { position: relative; z-index: 30; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 12px; margin-top: 32px; }
+
+/* Social icon buttons */
+.socials { display: flex; gap: 10px; margin-top: 26px; }
+.socials a {
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--body);
+  transition: background .25s, color .25s, transform .25s;
+}
+.socials a:hover { background: var(--fill); color: var(--on-fill); transform: translateY(-3px); }
+
+/* Pulsing dot (also used in the About photo chip) */
+.badge__dot { flex: none; }
+
+/* Illustration (animation lives inside the SVG file) */
+.scene { width: 100%; max-width: 440px; }
+.scene__img { width: 100%; height: auto; }
+
+/* Floating cards over the illustration */
+.float-card {
+  position: absolute;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 18px 40px -18px rgba(43, 29, 20, .3);
+}
+.float-card strong { display: block; font-family: var(--font-head); font-size: 26px; font-weight: 700; }
+.float-card span { font-size: 13px; color: var(--muted); }
+/* Cards sit under the desk so the illustration stays fully visible */
+.hero__visual { padding-bottom: 72px; }
+.float-card--gpa { left: 0; bottom: 0; }
+.float-card--rag { right: 0; bottom: -12px; width: 230px; }
+
+.float-card__head { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; }
+.float-card__icon {
+  width: 28px; height: 28px;
+  display: grid; place-items: center;
+  border-radius: 8px;
+  background: var(--caramel-tint);
+  color: var(--caramel-dark);
+}
+.float-card__icon .ic { width: 16px; height: 16px; }
+
+.meter { height: 8px; margin: 10px 0 6px; border-radius: 99px; background: var(--latte); overflow: hidden; }
+.meter__bar { width: 83%; height: 100%; border-radius: 99px; background: var(--caramel); animation: drawBar 1.6s var(--ease) .8s both; }
+
+/* Stats strip — one bordered row, numbers divided by thin lines */
+.stats {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 64px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.stat { padding: 26px 28px; }
+.stat + .stat { border-left: 1px solid var(--line); }
+.stat:first-child { padding-left: 0; }
+.stat strong {
+  display: block;
+  font-family: var(--font-head);
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -.005em;
+}
+.stat span { display: block; margin-top: 6px; max-width: 220px; font-size: 14px; line-height: 1.5; color: var(--muted); }

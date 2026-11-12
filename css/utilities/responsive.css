@@ -1,0 +1,63 @@
+/* =========================================================
+   RESPONSIVE (tablet & phone)
+   Kept in one place so breakpoints never conflict between files
+   ========================================================= */
+
+
+/* Tablet & below */
+@media (max-width: 860px) {
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat:nth-child(3) { border-left: 0; padding-left: 0; }
+  .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .contact { grid-template-columns: 1fr; gap: 32px; }
+  .xp__projects { grid-template-columns: 1fr; }
+  .skills__grid > div { grid-template-columns: 1fr; gap: 12px; }
+  .nav__toggle { display: flex; }
+  .nav__end { margin-left: auto; }
+
+  .nav__links {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 12px 24px 20px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity .25s, transform .25s, visibility .25s;
+  }
+  .nav__links.is-open { opacity: 1; visibility: visible; transform: none; }
+  .nav__links > a:not(.btn) { padding: 12px 0; }
+  .nav__links .btn { justify-content: center; margin-top: 8px; }
+
+  .hero { padding-top: 48px; }
+  .hero__ring { display: none; }
+
+  .about { gap: 48px; }
+  .project--featured .project__body { padding: 24px; }
+}
+
+/* Phone */
+@media (max-width: 520px) {
+  .contact__list a { grid-template-columns: 1fr auto; }
+  .contact__list small { grid-column: 1 / -1; }
+  .contact__list span { font-size: 19px; }
+  .info-row { grid-template-columns: 1fr; }
+  .info + .info { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+  .stat { padding: 20px 14px; }
+  .stat:first-child, .stat:nth-child(3) { padding-left: 0; }
+  .float-card--gpa { padding: 10px 14px; }
+  .float-card--gpa strong { font-size: 22px; }
+  .float-card--rag { width: 190px; padding: 10px 14px; }
+  .dropdown__menu { width: min(320px, calc(100vw - 48px)); }
+
+  .photo-card__badge { left: -6px; bottom: 20px; }
+  .photo-card__chip { right: -6px; top: 18px; }
+  .xp { padding: 22px; }
+  .timeline { padding-left: 22px; }
+  .timeline > li::before { left: -33px; }
+  .modal__body { padding: 22px; }
+}

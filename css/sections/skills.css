@@ -1,0 +1,45 @@
+/* =========================================================
+   SECTION: SKILLS  (#skills)
+   Light "spec table": category on the left, tools on the right,
+   one row per category separated by thin lines.
+   ========================================================= */
+.skills { position: relative; }
+
+.skills__grid {
+  margin-top: 32px;
+  border-bottom: 1px solid var(--line);
+}
+.skills__grid > div {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+  transition: background .3s;
+}
+.skills__grid > div:hover { background: linear-gradient(90deg, var(--latte), transparent 70%); }
+
+.skills h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips span {
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--body);
+  font-size: 15px;
+  font-weight: 500;
+  transition: background .25s, color .25s, border-color .25s, transform .25s;
+}
+.chips span:hover {
+  background: var(--fill);
+  border-color: var(--fill);
+  color: var(--on-fill);
+  transform: translateY(-2px);
+}

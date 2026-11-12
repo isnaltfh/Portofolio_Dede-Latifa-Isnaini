@@ -1,0 +1,56 @@
+/* =========================================================
+   CARDS, TAGS & SMALL BADGES (shared across sections)
+   ========================================================= */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+/* Hover lift effect — add .lift to any card */
+.lift { transition: transform .35s var(--ease), box-shadow .35s, border-color .35s; }
+.lift:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: var(--caramel);
+}
+
+/* Category tag (portfolio) */
+.tag {
+  align-self: flex-start;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+.tag--mocha   { background: var(--latte);        color: var(--mocha-dark); }
+.tag--sage    { background: var(--sage-tint);    color: var(--sage-dark); }
+.tag--caramel { background: var(--caramel-tint); color: var(--caramel-dark); }
+
+/* Rounded date pill (experience) */
+.pill {
+  padding: 3px 0;
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--soft);
+  white-space: nowrap;
+}
+
+/* Color helpers for numbers & icon boxes */
+.c-mocha   { color: var(--mocha); }
+.c-sage    { color: var(--sage); }
+.c-caramel { color: var(--caramel-dark); }
+.c-slate   { color: var(--slate); }
+
+.bg-mocha   { background: var(--latte);        color: var(--mocha); }
+.bg-sage    { background: var(--sage-tint);    color: var(--sage-dark); }
+.bg-caramel { background: var(--caramel-tint); color: var(--caramel-dark); }
+
+.bgs-mocha   { background: var(--fill); }
+.bgs-sage    { background: var(--sage); }
+.bgs-caramel { background: var(--caramel); }
+.bgs-slate   { background: var(--slate); }

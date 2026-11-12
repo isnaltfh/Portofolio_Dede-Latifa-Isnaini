@@ -1,0 +1,90 @@
+/* =========================================================
+   DESIGN TOKENS
+   Change colors, fonts and radius here — every file uses these.
+   Theme: milk-chocolate (latte), light & professional
+   ========================================================= */
+:root {
+  color-scheme: light;
+
+  /* Surfaces */
+  --bg: #F3E9DD;            /* warm latte page background */
+  --surface: #FFFCF8;       /* cards (warm white, stands out from the bg) */
+  --latte: #EBDCCB;         /* tinted areas: hovers, image frames */
+  --latte-2: #E0CCB6;
+  --line: #E3D3C1;          /* borders */
+  --line-strong: #D6BEA3;   /* hover borders, dashed frames */
+  --chip: #F3E9DD;          /* small tech tags inside cards */
+  --nav-bg: rgba(243, 233, 221, .85);
+
+  /* Text */
+  --ink: #2B1D14;           /* espresso */
+  --body: #4A382C;
+  --muted: #65503F;
+  --soft: #806956;
+
+  /* Brand */
+  --mocha: #7B4A2A;         /* primary (used for text accents) */
+  --mocha-dark: #5C3519;
+  --fill: #7B4A2A;          /* primary filled buttons/badges */
+  --fill-hover: #5C3519;
+  --on-fill: #FFFFFF;       /* text on --fill */
+  --caramel: #C0773A;       /* accent */
+  --caramel-dark: #8F5220;
+  --caramel-tint: #F4DFC8;
+  --sage: #5E7D6A;          /* secondary, keeps it professional */
+  --sage-dark: #3F5E4B;
+  --sage-tint: #E3ECE5;
+  --sage-line: #C3D6C8;
+  --slate: #3E5C76;
+  --espresso: #2B1D14;
+
+  /* Shape & motion */
+  --radius: 14px;
+  --radius-sm: 8px;
+  --radius-lg: 20px;
+  --shadow: 0 14px 30px -18px rgba(91, 53, 25, .4);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+
+  /* Fonts */
+  --font-head: 'Fraunces', Georgia, serif;           /* headings: soft, warm serif */
+  --font-body: 'Figtree', 'Segoe UI', sans-serif;     /* body text */
+  --font-label: 'Figtree', 'Segoe UI', sans-serif;    /* small labels, tags */
+}
+
+/* =========================================================
+   DARK THEME — set by js/utils/motion.js (saved choice, else system
+   setting) and switched with the moon/sun button in the navbar.
+   ========================================================= */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #1B1410;
+  --surface: #251B15;
+  --latte: #31241B;
+  --latte-2: #3E2E22;
+  --line: #3A2C22;
+  --line-strong: #5A4333;
+  --chip: #31241B;
+  --nav-bg: rgba(27, 20, 16, .85);
+
+  --ink: #F4E9DD;
+  --body: #E2D2C2;
+  --muted: #BFAA97;
+  --soft: #9F8A78;
+
+  --mocha: #E0AE7F;
+  --mocha-dark: #F0C9A2;
+  --fill: #D59A68;
+  --fill-hover: #E6B485;
+  --on-fill: #1B1410;
+  --caramel: #D98F4E;
+  --caramel-dark: #E6AB75;
+  --caramel-tint: #3B2A1D;
+  --sage: #8FB39A;
+  --sage-dark: #A9CDB3;
+  --sage-tint: #1F2C25;
+  --sage-line: #35493D;
+  --slate: #9DB8D2;
+
+  --shadow: 0 16px 34px -18px rgba(0, 0, 0, .7);
+}

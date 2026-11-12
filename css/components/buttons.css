@@ -1,0 +1,35 @@
+/* =========================================================
+   BUTTONS
+   Usage: .btn + one variant (.btn--primary / .btn--ghost) + optional size
+   ========================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid transparent;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform .25s var(--ease), box-shadow .25s, background .25s, color .25s;
+}
+.btn:hover { transform: translate(-2px, -2px); }
+
+/* Sizes */
+.btn--sm { font-size: 14px; }
+.btn--lg { min-height: 52px; padding: 0 26px; font-size: 16px; }
+
+/* Variants */
+.btn--primary { background: var(--fill); color: var(--on-fill); }
+.btn--primary:hover {
+  background: var(--fill-hover);
+  color: var(--on-fill);
+  box-shadow: 4px 4px 0 var(--caramel);
+}
+
+.btn--ghost { background: var(--surface); color: var(--mocha-dark); border-color: var(--latte-2); }
+.btn--ghost:hover { background: var(--latte); color: var(--mocha-dark); }
+
+.btn--warm { border-color: var(--line-strong); }

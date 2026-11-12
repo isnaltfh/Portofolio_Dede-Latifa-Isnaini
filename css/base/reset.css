@@ -1,0 +1,43 @@
+/* =========================================================
+   RESET & GLOBAL ELEMENTS
+   ========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px; /* keeps section titles below the sticky navbar */
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color .4s ease, color .4s ease;
+}
+
+/* Decorative rings may stick out of the layout — never allow sideways scrolling */
+main { overflow-x: clip; }
+
+img { max-width: 100%; display: block; }
+
+/* Elements hidden by JS (filters) must stay hidden even if they use flex/grid */
+[hidden] { display: none !important; }
+button { font: inherit; }
+
+a { color: var(--mocha); text-decoration: none; }
+a:hover { color: var(--mocha-dark); }
+
+/* Page container + section spacing */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section { padding-top: 96px; }
+
+/* Inline stroke icons */
+.ic {
+  width: 18px; height: 18px; flex: none;
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}

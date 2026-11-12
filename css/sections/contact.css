@@ -1,0 +1,37 @@
+/* =========================================================
+   SECTION: CONTACT  (#contact)
+   Open layout: big heading + intro on the left, contact links on the right.
+   ========================================================= */
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: end;
+  gap: 56px;
+  padding-top: 56px;
+  border-top: 1px solid var(--line);
+}
+.contact__intro .h2 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); line-height: 1.05; }
+.contact__intro > p:last-child { max-width: 460px; margin: 18px 0 0; font-size: 17px; line-height: 1.65; color: var(--muted); }
+
+.contact__list { margin: 0; padding: 0; list-style: none; border-bottom: 1px solid var(--line); }
+.contact__list li { border-top: 1px solid var(--line); }
+.contact__list a {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 4px;
+  color: var(--ink);
+  transition: padding .35s var(--ease), color .25s, background .3s;
+}
+.contact__list a:hover { padding-left: 14px; color: var(--mocha); background: var(--latte); }
+.contact__list small {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--soft);
+}
+.contact__list span { font-family: var(--font-head); font-size: 22px; font-weight: 600; overflow-wrap: anywhere; }
+.contact__list .ic { width: 20px; height: 20px; color: var(--caramel-dark); transition: transform .3s var(--ease); }
+.contact__list a:hover .ic { transform: translate(3px, -3px); }

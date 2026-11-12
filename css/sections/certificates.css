@@ -1,0 +1,141 @@
+/* =========================================================
+   SECTION: CERTIFICATES  (#certificates)
+   Two rows of small cards that slide sideways (js/modules/marquee.js).
+   Top row moves left, bottom row moves right. Hover pauses.
+   Click a card → enlarged view (js/modules/modal.js).
+   Images: images/certificates/*.jpg — a placeholder shows until the
+   file exists (js/modules/imageFallback.js adds .is-missing).
+   ========================================================= */
+#certificates .section__head { align-items: flex-end; }
+#certificates .section__sub { max-width: 380px; margin: 0; }
+
+/* Small label above each row */
+.cert-rail__label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 36px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.cert-rail__label::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+.cert-rail__label span {
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--latte);
+  color: var(--mocha);
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+/* Full-width rail with soft faded edges */
+.cert-rail {
+  margin-top: 12px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.cert-rail__track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  padding: 6px 0 10px;
+  animation: marquee var(--duration, 60s) linear infinite;
+}
+.cert-rail--reverse .cert-rail__track { animation-direction: reverse; }
+.cert-rail:hover .cert-rail__track,
+.cert-rail:focus-within .cert-rail__track { animation-play-state: paused; }
+
+/* ---------- Card ---------- */
+.cert {
+  flex: none;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--ink);
+  font: inherit;
+  cursor: zoom-in;
+  transition: transform .35s var(--ease), border-color .35s, box-shadow .35s;
+}
+.cert:hover,
+.cert:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--caramel);
+  box-shadow: var(--shadow);
+}
+.cert:focus-visible { outline: 3px solid var(--caramel); outline-offset: 2px; }
+
+/* Thumbnail */
+.cert__thumb {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--latte);
+  border-bottom: 1px solid var(--line);
+}
+.cert__thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  padding: 10px;
+  object-fit: contain;            /* whole certificate visible */
+  filter: drop-shadow(0 6px 10px rgba(43, 29, 20, .18));
+  transition: transform .6s var(--ease);
+}
+/* Portrait documents (letters): show the top part, filling the frame */
+.cert__thumb--portrait img { padding: 0; object-fit: cover; object-position: top; filter: none; }
+.cert:hover .cert__thumb img { transform: scale(1.05); }
+
+/* Placeholder: a mini "certificate" with the issuer name */
+.cert__mark {
+  display: none;
+  min-width: 60%;
+  padding: 14px 16px 12px;
+  border: 1px solid var(--line-strong);
+  outline: 3px double var(--line-strong);
+  outline-offset: 4px;
+  background: var(--surface);
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--mocha);
+}
+.cert__mark::after {
+  content: '';
+  display: block;
+  width: 70%; height: 4px;
+  margin: 8px auto 0;
+  border-radius: 2px;
+  background: repeating-linear-gradient(90deg, var(--line-strong) 0 18px, transparent 18px 24px);
+}
+.is-missing .cert__mark { display: block; }
+.is-missing img { display: none; }
+
+/* Text */
+.cert__body { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px 14px; }
+.cert__issuer { font-family: var(--font-label); font-size: 11px; font-weight: 600; color: var(--caramel-dark); }
+.cert__name {
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

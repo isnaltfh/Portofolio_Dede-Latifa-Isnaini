@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 440" width="420" height="440" role="img" aria-label="Illustration of a woman coding on a laptop with a cup of coffee">
+  <!--
+    Coding girl illustration — self-contained.
+    All animation styles live inside this file so they never clash with the page CSS.
+  -->
+  <style>
+    * { transform-box: fill-box; }
+    .head      { transform-origin: 50% 100%; animation: headBob 4s ease-in-out infinite; }
+    .eye       { transform-origin: center; animation: blinkEye 4.5s infinite; }
+    .hand      { transform-origin: center; }
+    .hand-l    { animation: typing .28s ease-in-out infinite alternate; }
+    .hand-r    { animation: typing .28s ease-in-out infinite alternate-reverse; }
+    .steam     { opacity: 0; animation: steam 3s ease-out infinite; }
+    .s2        { animation-delay: 1.4s; }
+    .code-win  { animation: floatY 6s ease-in-out infinite; }
+    .cl        { transform-origin: left center; transform: scaleX(0); animation: codeType 6s cubic-bezier(.2,.7,.2,1) infinite; }
+    .cl2       { animation-delay: .6s; }
+    .cl3       { animation-delay: 1.2s; }
+    .cl4       { animation-delay: 1.8s; }
+    .cursor    { animation: blink 1s step-end infinite; }
+    .t1        { animation: floatY 5s ease-in-out infinite; }
+    .t2        { animation: floatY 6.5s ease-in-out infinite -2s; }
+    .t3        { animation: floatY 5.8s ease-in-out infinite -1s; }
+    .plant     { transform-origin: 50% 100%; animation: sway 5s ease-in-out infinite; }
+
+    @keyframes floatY   { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    @keyframes typing   { from { transform: translateY(0); } to { transform: translateY(-4px); } }
+    @keyframes blinkEye { 0%,90%,100% { transform: scaleY(1); } 94% { transform: scaleY(.1); } }
+    @keyframes headBob  { 0%,100% { transform: rotate(0); } 50% { transform: rotate(-3deg); } }
+    @keyframes steam    { 0% { opacity: 0; transform: translateY(6px); } 30% { opacity: .9; } 100% { opacity: 0; transform: translateY(-18px); } }
+    @keyframes codeType { 0% { transform: scaleX(0); } 15%,80% { transform: scaleX(1); } 95%,100% { transform: scaleX(0); } }
+    @keyframes blink    { 50% { opacity: 0; } }
+    @keyframes sway     { 0%,100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .cl { transform: none; }
+    }
+  </style>
+
+  <!-- background -->
+  <circle cx="210" cy="250" r="170" fill="#EADBC8"/>
+  <circle cx="210" cy="250" r="130" fill="#DFCAB2"/>
+
+  <!-- floating code window -->
+  <g class="code-win">
+    <rect x="248" y="40" width="160" height="112" rx="14" fill="#2B1D14"/>
+    <circle cx="266" cy="58" r="4" fill="#E07B5F"/>
+    <circle cx="280" cy="58" r="4" fill="#E2B35B"/>
+    <circle cx="294" cy="58" r="4" fill="#8FB38F"/>
+    <rect class="cl cl1" x="264" y="76"  width="70" height="7" rx="3.5" fill="#C0773A"/>
+    <rect class="cl cl2" x="276" y="92"  width="98" height="7" rx="3.5" fill="#F3E6D8"/>
+    <rect class="cl cl3" x="276" y="108" width="62" height="7" rx="3.5" fill="#8FB38F"/>
+    <rect class="cl cl4" x="264" y="124" width="84" height="7" rx="3.5" fill="#E2B35B"/>
+    <rect class="cursor" x="352" y="122" width="3" height="11" fill="#F3E6D8"/>
+  </g>
+
+  <!-- floating tags -->
+  <g class="t1"><rect x="22" y="92" width="62" height="34" rx="10" fill="#FFFFFF"/><text x="53" y="115" text-anchor="middle" font-family="monospace" font-weight="700" font-size="16" fill="#7B4A2A">&lt;/&gt;</text></g>
+  <g class="t2"><rect x="40" y="186" width="54" height="32" rx="10" fill="#FFFFFF"/><text x="67" y="207" text-anchor="middle" font-family="monospace" font-weight="700" font-size="15" fill="#5E7D6A">{ }</text></g>
+  <g class="t3"><rect x="150" y="34" width="52" height="30" rx="10" fill="#FFFFFF"/><text x="176" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#C0773A">AI</text></g>
+
+  <!-- chair -->
+  <rect x="128" y="236" width="164" height="150" rx="40" fill="#7B4A2A"/>
+
+  <!-- figure -->
+  <path d="M158 210 C150 150 270 150 262 210 L270 300 L150 300 Z" fill="#3B2418"/>
+  <path d="M136 392 Q138 296 210 288 Q282 296 284 392 Z" fill="#C0773A"/>
+  <path d="M188 290 Q210 312 232 290" fill="none" stroke="#9A5A22" stroke-width="5" stroke-linecap="round"/>
+  <rect x="198" y="256" width="24" height="36" rx="10" fill="#E8B892"/>
+
+  <g class="head">
+    <circle cx="210" cy="216" r="44" fill="#F2C9A5"/>
+    <path d="M166 214 C160 168 214 150 248 176 C258 186 258 200 254 210 C238 196 214 188 186 196 C178 200 172 206 166 214 Z" fill="#3B2418"/>
+    <circle cx="210" cy="166" r="18" fill="#3B2418"/>
+    <ellipse class="eye" cx="194" cy="224" rx="4.2" ry="5.2" fill="#2B1D14"/>
+    <ellipse class="eye" cx="226" cy="224" rx="4.2" ry="5.2" fill="#2B1D14"/>
+    <circle cx="194" cy="224" r="11" fill="none" stroke="#5C3519" stroke-width="2.5"/>
+    <circle cx="226" cy="224" r="11" fill="none" stroke="#5C3519" stroke-width="2.5"/>
+    <path d="M205 224 h10" stroke="#5C3519" stroke-width="2.5"/>
+    <circle cx="182" cy="240" r="5" fill="#E9A48A" opacity=".6"/>
+    <circle cx="238" cy="240" r="5" fill="#E9A48A" opacity=".6"/>
+    <path d="M202 244 Q210 251 218 244" fill="none" stroke="#8A4B33" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- desk -->
+  <rect x="40" y="388" width="340" height="16" rx="8" fill="#5C3519"/>
+
+  <!-- laptop -->
+  <rect x="146" y="304" width="128" height="84" rx="8" fill="#D9C7B5"/>
+  <circle cx="210" cy="346" r="9" fill="#F3E6D8"/>
+  <path d="M210 340 v12" stroke="#C0773A" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M132 388 h156 l-8 -6 h-140 Z" fill="#BFA994"/>
+
+  <!-- arms + typing hands -->
+  <path d="M150 318 Q140 360 176 384" fill="none" stroke="#C0773A" stroke-width="18" stroke-linecap="round"/>
+  <path d="M270 318 Q280 360 244 384" fill="none" stroke="#C0773A" stroke-width="18" stroke-linecap="round"/>
+  <ellipse class="hand hand-l" cx="178" cy="384" rx="11" ry="7" fill="#F2C9A5"/>
+  <ellipse class="hand hand-r" cx="242" cy="384" rx="11" ry="7" fill="#F2C9A5"/>
+
+  <!-- coffee mug -->
+  <path class="steam s1" d="M318 346 q-6 -10 0 -20 q6 -10 0 -20" fill="none" stroke="#BFA994" stroke-width="3" stroke-linecap="round"/>
+  <path class="steam s2" d="M332 346 q-6 -10 0 -20 q6 -10 0 -20" fill="none" stroke="#BFA994" stroke-width="3" stroke-linecap="round"/>
+  <rect x="306" y="352" width="38" height="36" rx="8" fill="#FFFFFF"/>
+  <path d="M344 362 h6 a8 8 0 0 1 0 16 h-6" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+  <rect x="306" y="364" width="38" height="8" fill="#C0773A"/>
+
+  <!-- plant -->
+  <g class="plant">
+    <path d="M92 360 q-18 -26 -4 -50 q8 22 4 50" fill="#5E7D6A"/>
+    <path d="M96 360 q14 -30 34 -36 q-10 24 -34 36" fill="#7E9E87"/>
+    <path d="M94 360 q-26 -10 -36 -30 q24 4 36 30" fill="#7E9E87"/>
+  </g>
+  <path d="M78 358 h36 l-5 30 h-26 Z" fill="#C0773A"/>
+</svg>
